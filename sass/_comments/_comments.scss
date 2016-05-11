@@ -21,6 +21,11 @@
 	@include flex-item--center;
 }
 
+._comments__author-name {
+	margin-left: $spacing-regular--quarter;
+	margin-right: $spacing-regular--quarter;
+}
+
 ._comments__author-text {
 	margin-left: $spacing-regular--half;
 }
