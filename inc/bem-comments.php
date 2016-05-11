@@ -20,18 +20,18 @@ function _bem_comments( $comment, $args, $depth ) {
 				$tag = 'div';
 				$add_below = 'comment';
 			} else {
-				$tag = 'li';
+				$tag = 'div';
 				$add_below = 'div-comment';
 			}
 			?>
-			<li <?php comment_class( '_comments__list-item' ); ?> id="comment-<?php comment_ID(); ?>">
+			<div <?php comment_class( '_comments__list-item' ); ?> id="comment-<?php comment_ID(); ?>">
 				<p><?php esc_html_e( 'Pingback:', 'pietergoosen' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'pietergoosen' ), '<span class="edit-link">', '</span>' ); ?></p>
 			<?php
 			break;
 		default :
 			global $post;
 			?>
-			<li <?php comment_class( '_comments__list-item' ); ?> id="li-comment-<?php comment_ID(); ?>">
+			<div <?php comment_class( '_comments__list-item' ); ?> id="li-comment-<?php comment_ID(); ?>">
 				<article id="div-comment-<?php comment_ID(); ?>" class="comment-body _comments__article">
 					<footer class="comment-meta __comments__footer">
 						<div class="comment-author vcard _comments__author">
