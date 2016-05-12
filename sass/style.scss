@@ -110,6 +110,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "_shame/shame";
 
 /*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "_media/media";
+
+/*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 // @import "elements/elements";
@@ -138,8 +143,3 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Infinite scroll
 --------------------------------------------------------------*/
 // @import "modules/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-// @import "media/media";
