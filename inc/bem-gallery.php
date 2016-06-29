@@ -3,17 +3,15 @@
 function _bem_gallery_link($link, $id) {
   return str_replace('<a ', '<a class="_gallery__link" ', $link);
 }
+
 add_filter( 'wp_get_attachment_link', '_bem_gallery_link', 10, 2 );
+
 // source: http://robido.com/wordpress/wordpress-gallery-filter-to-modify-the-html-output-of-the-default-gallery-shortcode-and-style/
 
 // Custom filter function to modify default gallery shortcode output
 function _bem_gallery( $output, $attr ) {
 	// Initialize
 	global $post, $wp_locale;
-
-	// Gallery instance counter
-	static $instance = 0;
-	$instance++;
 
 	// Validate the author's orderby attribute
 	if ( isset( $attr['orderby'] ) ) {
@@ -29,7 +27,7 @@ function _bem_gallery( $output, $attr ) {
 		'itemtag'    => 'dl',
 		'icontag'    => 'dt',
 		'captiontag' => 'dd',
-		'columns'    => 3,
+		'columns'    => (isset($attr["columns"]) && $attr["columns"] > 1) ? " _gallery__item--" . $attr["columns"] : "",
 		'size'       => 'thumbnail',
 		'include'    => '',
 		'exclude'    => ''
@@ -78,7 +76,7 @@ function _bem_gallery( $output, $attr ) {
 	$columns = intval( $columns );
 	$itemwidth = $columns > 0 ? floor( 100 / $columns ) : 100;
 	$float = is_rtl() ? 'right' : 'left';
-	$selector = "gallery-{$instance}";
+	$selector = (isset($attr["columns"]) && $attr["columns"] > 1) ? " _gallery__item--" . $attr["columns"] : "";
 
 	// Iterate through the attachments in this gallery instance
 	$i = 0;
@@ -99,7 +97,7 @@ function _bem_gallery( $output, $attr ) {
     }
 
 		// Start itemtag
-		$output .= "<{$itemtag} class='_gallery__item gallery-item'>";
+		$output .= "<{$itemtag} class='_gallery__item" . $selector . " gallery-item'>";
 
 		// icontag
 		$output .= "
@@ -129,7 +127,9 @@ function _bem_gallery( $output, $attr ) {
 	$output .= "
 		<br style='clear: both;'>
 	</div>\n";
-
+  
+  $output = '<div class="_gallery">' . $output . '</div>';
+  
 	return $output;
 
 }
