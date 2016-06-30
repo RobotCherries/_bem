@@ -7,89 +7,19 @@
   @include flex-box;
   @include flex-container--column;
   @include flex-center;
+  @include flex-box--no-grow;
   margin-bottom: $spacing-regular;
 }
 
-._gallery__item--2 {
-  @include flex-basis(2, $spacing-regular);
-  margin-bottom: $spacing-regular;
-  
-  &:nth-of-type(2n+1) {
-    padding-right: $spacing-regular;
-  }
-}
-
-._gallery__item--3 {
-  @include flex-basis(3, $spacing-regular);
-  margin-bottom: $spacing-regular;
-  
-  &:nth-of-type(3n+1) {
-    padding-right: $spacing-regular;
-  }
-  
-  &:nth-of-type(3n+2) {
-    padding-right: $spacing-regular;
-  }
-}
-
-._gallery__item--4 {
-  @include flex-basis(4, $spacing-regular);
-  margin-bottom: $spacing-regular;
-  
-  &:nth-of-type(4n+1) {
-    padding-right: $spacing-regular;
-  }
-  
-  &:nth-of-type(4n+2) {
-    padding-right: $spacing-regular;
-  }
-  
-  &:nth-of-type(4n+3) {
-    padding-right: $spacing-regular;
-  }
-}
-
-._gallery__item--2 {
-  @include flex-basis(2, $spacing-regular);
-  margin-bottom: $spacing-regular;
-  
-  &:nth-of-type(2n+1) {
-    padding-right: $spacing-regular;
-  }
-}
-
-._gallery__item--2 {
-  @include flex-basis(2, $spacing-regular);
-  margin-bottom: $spacing-regular;
-  
-  &:nth-of-type(2n+1) {
-    padding-right: $spacing-regular;
-  }
-}
-
-._gallery__item--2 {
-  @include flex-basis(2, $spacing-regular);
-  margin-bottom: $spacing-regular;
-  
-  &:nth-of-type(2n+1) {
-    padding-right: $spacing-regular;
-  }
-}
-
-._gallery__item--2 {
-  @include flex-basis(2, $spacing-regular);
-  margin-bottom: $spacing-regular;
-  
-  &:nth-of-type(2n+1) {
-    padding-right: $spacing-regular;
-  }
-}
-
-._gallery__item--2 {
-  @include flex-basis(2, $spacing-regular);
-  margin-bottom: $spacing-regular;
-  
-  &:nth-of-type(2n+1) {
-    padding-right: $spacing-regular;
+@for $i from 2 through 9 {
+  ._gallery__item--#{$i} {
+    @include flex-basis($i, $spacing-regular);
+    margin-bottom: $spacing-regular;
+    
+    @for $j from 1 through $i - 1 {
+      &:nth-of-type(#{$i}n+#{$j}) {
+        padding-right: $spacing-regular;
+      }
+    }
   }
 }
