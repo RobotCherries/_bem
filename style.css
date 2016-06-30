@@ -873,9 +873,6 @@ object {
 ._gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
   margin-top: 0.5rem; }
 
 ._gallery__item {

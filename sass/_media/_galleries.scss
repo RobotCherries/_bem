@@ -1,7 +1,6 @@
 ._gallery {
   @include flex-container;
   @include flex-container--wrap;
-  @include flex-center;
   margin-top: $spacing-regular--half;
 }
 
