@@ -1,202 +1,27 @@
-.gallery {
-	@include flex-container;
-	@include flex-container--wrap;
-	margin-bottom: $spacing-regular;
+._gallery {
+  @include flex-container;
+  @include flex-container--wrap;
+  margin-top: $spacing-regular--half;
 }
 
-.gallery-item {
-	@include flex-box;
-	@include flex-container--column;
-	padding: 0;
-	margin: $spacing-regular 0;
+._gallery__item {
+  @include flex-box;
+  @include flex-container--column;
+  @include flex-box--no-grow;
+  margin-bottom: $spacing-regular--half;
 }
 
-.gallery-columns-2 .gallery-item {
-	@include flex-box--no-grow;
-	margin-left: $spacing-regular;
-	margin-right: $spacing-regular;
-	
-	@include mq($from: wide) {
-		flex-basis: calc((100% / 2) - #{$spacing-regular});
-		
-		&:nth-of-type(2n) {
-			margin-right: 0;
-		}
-		
-		&:nth-of-type(2n+1) {
-			margin-left: 0;
-		}
-	}
-}
-
-.gallery-columns-3 .gallery-item {
-	@include flex-box--no-grow;
-	margin-left: $spacing-regular;
-	margin-right: $spacing-regular;
-	
-	@include mq($from: wide) {
-		flex-basis: calc((100% / 3) - (#{$spacing-regular} * 4 / 3));
-		
-		&:nth-of-type(3n) {
-			margin-right: 0;
-		}
-		
-		&:nth-of-type(3n+1) {
-			margin-left: 0;
-		}
-	}
-}
-
-.gallery-columns-4 .gallery-item {
-	@include flex-box--no-grow;
-	margin-left: $spacing-regular;
-	margin-right: $spacing-regular;
-	margin-right: $spacing-regular;
-	
-	@include mq($from: wide) {
-		flex-basis: calc((100% / 4) - (#{$spacing-regular} * 6 / 4));
-		
-		&:nth-of-type(4n) {
-			margin-right: 0;
-		}
-		
-		&:nth-of-type(4n+1) {
-			margin-left: 0;
-		}
-	}
-}
-
-.gallery-columns-5 .gallery-item {
-	@include flex-box--no-grow;
-	margin-left: $spacing-regular;
-	margin-right: $spacing-regular;
-	margin-right: $spacing-regular;
-	
-	@include mq($from: wide) {
-		flex-basis: calc((100% / 5) - (#{$spacing-regular} * 8 / 5));
-		
-		&:nth-of-type(5n) {
-			margin-right: 0;
-		}
-		
-		&:nth-of-type(5n+1) {
-			margin-left: 0;
-		}
-	}
-}
-
-.gallery-columns-6 .gallery-item {
-	@include flex-box--no-grow;
-	margin-left: $spacing-regular;
-	margin-right: $spacing-regular;
-	margin-right: $spacing-regular;
-	
-	@include mq($from: wide) {
-		flex-basis: calc((100% / 6) - (#{$spacing-regular} * 10 / 6));
-		
-		&:nth-of-type(6n) {
-			margin-right: 0;
-		}
-		
-		&:nth-of-type(6n+1) {
-			margin-left: 0;
-		}
-	}
-}
-
-.gallery-columns-7 .gallery-item {
-	@include flex-box--no-grow;
-	margin-left: $spacing-regular;
-	margin-right: $spacing-regular;
-	margin-right: $spacing-regular;
-	
-	@include mq($from: wide) {
-		flex-basis: calc((100% / 7) - (#{$spacing-regular} * 12 / 7));
-		
-		&:nth-of-type(7n) {
-			margin-right: 0;
-		}
-		
-		&:nth-of-type(7n+1) {
-			margin-left: 0;
-		}
-	}
-}
-
-.gallery-columns-8 .gallery-item {
-	@include flex-box--no-grow;
-	margin-left: $spacing-regular;
-	margin-right: $spacing-regular;
-	margin-right: $spacing-regular;
-	
-	@include mq($from: wide) {
-		flex-basis: calc((100% / 8) - (#{$spacing-regular} * 14 / 8));
-		
-		&:nth-of-type(8n) {
-			margin-right: 0;
-		}
-		
-		&:nth-of-type(8n+1) {
-			margin-left: 0;
-		}
-	}
-}
-
-.gallery-columns-9 .gallery-item {
-	@include flex-box--no-grow;
-	margin-left: $spacing-regular;
-	margin-right: $spacing-regular;
-	
-	@include mq($from: wide) {
-		flex-basis: calc((100% / 9) - (#{$spacing-regular} * 16 / 9));
-		
-		&:nth-of-type(9n) {
-			margin-right: 0;
-		}
-		
-		&:nth-of-type(9n+1) {
-			margin-left: 0;
-		}
-	}
-}
-
-.gallery-columns-3 .gallery-item,
-.gallery-columns-6 .gallery-item,
-.gallery-columns-9 .gallery-item {
-	@include mq($from: desktop, $until: wide) {
-		flex-basis: calc((100% / 3) - (#{$spacing-regular} * 4 / 3));
-		
-		&:nth-of-type(3n) {
-			margin-right: 0;
-		}
-		
-		&:nth-of-type(3n+1) {
-			margin-left: 0;
-		}
-	}
-}
-
-.gallery-columns-2 .gallery-item,
-.gallery-columns-3 .gallery-item,
-.gallery-columns-4 .gallery-item,
-.gallery-columns-5 .gallery-item,
-.gallery-columns-6 .gallery-item,
-.gallery-columns-7 .gallery-item,
-.gallery-columns-8 .gallery-item,
-.gallery-columns-9 .gallery-item {
-	@include mq($from: tablet, $until: desktop) {
-		flex-basis: calc((100% / 2) - #{$spacing-regular});
-		
-		&:nth-of-type(2n) {
-			margin-right: 0;
-		}
-		
-		&:nth-of-type(2n+1) {
-			margin-left: 0;
-		}
-	}
-}
-	
-.gallery-caption {
-	display: block;
+@include mq($from: desktop) {
+  @for $i from 2 through 9 {
+    ._gallery__item--#{$i} {
+      @include flex-basis($i, $spacing-regular--half);
+      margin-bottom: $spacing-regular--half;
+      
+      @for $j from 1 through $i - 1 {
+        &:nth-of-type(#{$i}n+#{$j}) {
+          padding-right: $spacing-regular--half;
+        }
+      }
+    }
+  }
 }

@@ -21,3 +21,7 @@ require get_template_directory( ) . '/inc/bem-post-links.php';
  * Load bem post edit link.
  */
 require get_template_directory( ) . '/inc/bem-post-edit-link.php';
+/**
+ * Load bem gallery..
+ */
+require get_template_directory( ) . '/inc/bem-gallery.php';
