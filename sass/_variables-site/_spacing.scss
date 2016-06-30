@@ -4,9 +4,9 @@ $sup-position: -0.5em;
 $sub-position: -0.25em;
 
 $spacing-regular: 1rem;
-$spacing-regular--half: calc(#{$spacing-regular} / 2);
-$spacing-regular--quarter: calc(#{$spacing-regular} / 2);
-$spacing-regular--double: calc(#{$spacing-regular} * 2);
+$spacing-regular--half: .5rem;
+$spacing-regular--quarter: .25rem;
+$spacing-regular--double: 2rem;
 
-$input-height: calc(1rem * 2.5);
-$input-height--double: calc(1rem * 2.5 * 2);
+$input-height: 2.5rem;
+$input-height--double: 5rem;

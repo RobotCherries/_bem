@@ -6,6 +6,13 @@ function _bem_gallery_link($link, $id) {
 
 add_filter( 'wp_get_attachment_link', '_bem_gallery_link', 10, 2 );
 
+// source: http://wordpress.stackexchange.com/questions/203317/set-default-number-of-columns-in-gallery
+function _bem_media_view_settings( $settings ) {
+    $settings['galleryDefaults']['columns'] = 1;
+    return $settings;
+}
+add_filter( 'media_view_settings', '_bem_media_view_settings' );
+
 // source: http://robido.com/wordpress/wordpress-gallery-filter-to-modify-the-html-output-of-the-default-gallery-shortcode-and-style/
 
 // Custom filter function to modify default gallery shortcode output

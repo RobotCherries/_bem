@@ -1,24 +1,27 @@
 ._gallery {
   @include flex-container;
   @include flex-container--wrap;
+  @include flex-center;
+  margin-top: $spacing-regular--half;
 }
 
 ._gallery__item {
   @include flex-box;
   @include flex-container--column;
-  @include flex-center;
   @include flex-box--no-grow;
-  margin-bottom: $spacing-regular;
+  margin-bottom: $spacing-regular--half;
 }
 
-@for $i from 2 through 9 {
-  ._gallery__item--#{$i} {
-    @include flex-basis($i, $spacing-regular);
-    margin-bottom: $spacing-regular;
-    
-    @for $j from 1 through $i - 1 {
-      &:nth-of-type(#{$i}n+#{$j}) {
-        padding-right: $spacing-regular;
+@include mq($from: desktop) {
+  @for $i from 2 through 9 {
+    ._gallery__item--#{$i} {
+      @include flex-basis($i, $spacing-regular--half);
+      margin-bottom: $spacing-regular--half;
+      
+      @for $j from 1 through $i - 1 {
+        &:nth-of-type(#{$i}n+#{$j}) {
+          padding-right: $spacing-regular--half;
+        }
       }
     }
   }
