@@ -8,6 +8,7 @@
   @include flex-box;
   @include flex-container--column;
   @include flex-box--no-grow;
+  @include flex-justify--center;
   margin-bottom: $spacing-regular--half;
 }
 
