@@ -1054,3 +1054,100 @@ object {
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
+gallery__item--5:nth-of-type(5n+4) {
+      padding-right: 0.5rem; }
+  ._gallery__item--6 {
+    width: calc(16.66667 * 1% - 0.41667rem);
+    -webkit-flex-basis: calc(16.66667 * 1% - 0.41667rem);
+    -ms-flex-preferred-size: calc(16.66667 * 1% - 0.41667rem);
+    flex-basis: calc(16.66667 * 1% - 0.41667rem);
+    margin-bottom: 0.5rem; }
+    ._gallery__item--6:nth-of-type(6n+1) {
+      padding-right: 0.5rem; }
+    ._gallery__item--6:nth-of-type(6n+2) {
+      padding-right: 0.5rem; }
+    ._gallery__item--6:nth-of-type(6n+3) {
+      padding-right: 0.5rem; }
+    ._gallery__item--6:nth-of-type(6n+4) {
+      padding-right: 0.5rem; }
+    ._gallery__item--6:nth-of-type(6n+5) {
+      padding-right: 0.5rem; }
+  ._gallery__item--7 {
+    width: calc(14.28571 * 1% - 0.42857rem);
+    -webkit-flex-basis: calc(14.28571 * 1% - 0.42857rem);
+    -ms-flex-preferred-size: calc(14.28571 * 1% - 0.42857rem);
+    flex-basis: calc(14.28571 * 1% - 0.42857rem);
+    margin-bottom: 0.5rem; }
+    ._gallery__item--7:nth-of-type(7n+1) {
+      padding-right: 0.5rem; }
+    ._gallery__item--7:nth-of-type(7n+2) {
+      padding-right: 0.5rem; }
+    ._gallery__item--7:nth-of-type(7n+3) {
+      padding-right: 0.5rem; }
+    ._gallery__item--7:nth-of-type(7n+4) {
+      padding-right: 0.5rem; }
+    ._gallery__item--7:nth-of-type(7n+5) {
+      padding-right: 0.5rem; }
+    ._gallery__item--7:nth-of-type(7n+6) {
+      padding-right: 0.5rem; }
+  ._gallery__item--8 {
+    width: calc(12.5 * 1% - 0.4375rem);
+    -webkit-flex-basis: calc(12.5 * 1% - 0.4375rem);
+    -ms-flex-preferred-size: calc(12.5 * 1% - 0.4375rem);
+    flex-basis: calc(12.5 * 1% - 0.4375rem);
+    margin-bottom: 0.5rem; }
+    ._gallery__item--8:nth-of-type(8n+1) {
+      padding-right: 0.5rem; }
+    ._gallery__item--8:nth-of-type(8n+2) {
+      padding-right: 0.5rem; }
+    ._gallery__item--8:nth-of-type(8n+3) {
+      padding-right: 0.5rem; }
+    ._gallery__item--8:nth-of-type(8n+4) {
+      padding-right: 0.5rem; }
+    ._gallery__item--8:nth-of-type(8n+5) {
+      padding-right: 0.5rem; }
+    ._gallery__item--8:nth-of-type(8n+6) {
+      padding-right: 0.5rem; }
+    ._gallery__item--8:nth-of-type(8n+7) {
+      padding-right: 0.5rem; }
+  ._gallery__item--9 {
+    width: calc(11.11111 * 1% - 0.44444rem);
+    -webkit-flex-basis: calc(11.11111 * 1% - 0.44444rem);
+    -ms-flex-preferred-size: calc(11.11111 * 1% - 0.44444rem);
+    flex-basis: calc(11.11111 * 1% - 0.44444rem);
+    margin-bottom: 0.5rem; }
+    ._gallery__item--9:nth-of-type(9n+1) {
+      padding-right: 0.5rem; }
+    ._gallery__item--9:nth-of-type(9n+2) {
+      padding-right: 0.5rem; }
+    ._gallery__item--9:nth-of-type(9n+3) {
+      padding-right: 0.5rem; }
+    ._gallery__item--9:nth-of-type(9n+4) {
+      padding-right: 0.5rem; }
+    ._gallery__item--9:nth-of-type(9n+5) {
+      padding-right: 0.5rem; }
+    ._gallery__item--9:nth-of-type(9n+6) {
+      padding-right: 0.5rem; }
+    ._gallery__item--9:nth-of-type(9n+7) {
+      padding-right: 0.5rem; }
+    ._gallery__item--9:nth-of-type(9n+8) {
+      padding-right: 0.5rem; } }
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
