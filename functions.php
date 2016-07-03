@@ -102,9 +102,10 @@ function _bem_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', '_bem' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'class'         => '_sidebar',
+		'before_widget' => '<section id="%1$s" class="widget _widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
+		'before_title'  => '<h2 class="widget-title _widget__title">',
 		'after_title'   => '</h2>',
 	) );
 }
