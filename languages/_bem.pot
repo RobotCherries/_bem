@@ -66,6 +66,61 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
+#: comments.php:135
+#@ _bem
+msgid "You may use these HTML tags and attributes: %s"
+msgstr ""
+
+#: comments.php:84
+#@ _bem
+msgid "Name"
+msgstr ""
+
+#: comments.php:90
+#@ _bem
+msgid "Email"
+msgstr ""
+
+#: comments.php:96
+#@ _bem
+msgid "Website"
+msgstr ""
+
+#: comments.php:107
+#@ _bem
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:108
+#@ _bem
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: comments.php:109
+#@ _bem
+msgid "Cancel Reply"
+msgstr ""
+
+#: comments.php:110
+#@ _bem
+msgid "Post Comment"
+msgstr ""
+
+#: comments.php:117
+#@ _bem
+msgid "You must be <a href="%s">logged in</a> to post a comment."
+msgstr ""
+
+#: comments.php:123
+#@ _bem
+msgid "Logged in as <a href="%1$s" class="_comments__user-name">%2$s</a>. <a href="%3$s" class="_comments__logout-link" title="Log out of this account">Log out?</a>"
+msgstr ""
+
+#: comments.php:130
+#@ _bem
+msgid "Your email address will not be published."
+msgstr ""
+
 #: footer.php:18
 #@ _bem
 msgid "https://wordpress.org/"
@@ -107,7 +162,7 @@ msgstr ""
 #, php-format
 #@ _bem
 msgctxt "post date"
-msgid "Posted on %s"
+msgid "Posted on %s,"
 msgstr ""
 
 #: inc/template-tags.php:33
