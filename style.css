@@ -395,13 +395,13 @@ a {
   color: royalblue;
   transition: all .3s; }
   a:hover {
-    color: midnightblue; }
+    color: #1a3ca2; }
   a:visited {
-    color: purple; }
+    color: #6d8ce8; }
     a:visited:hover {
-      color: midnightblue; }
+      color: #1a3ca2; }
   a:active {
-    color: midnightblue; }
+    color: #1a3ca2; }
 
 /* Figures & other elements
    ========================================================================== */
@@ -570,9 +570,9 @@ big {
 a {
   color: royalblue; }
   a:visited {
-    color: purple; }
+    color: #6d8ce8; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #1a3ca2; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -1039,7 +1039,7 @@ object {
 /*--------------------------------------------------------------
 # Theme
 --------------------------------------------------------------*/
-375rem);
+5rem);
     margin-bottom: 0.5rem; }
     ._gallery__item--4:nth-of-type(4n+1) {
       padding-right: 0.5rem; }
