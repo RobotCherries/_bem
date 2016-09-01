@@ -1,7 +1,11 @@
-.site {
+._site {
 	@include flex;
 	@include direction(column);
-	min-height: calc(100vh - 32px);
+	min-height: 100vh;
+
+	.admin-bar & {
+		min-height: calc(100vh - 32px);
+	}
 }
 
 ._content {

@@ -16,8 +16,8 @@ $color__text-warning: Gold;
 $color__text-error: Tomato;
 
 $color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link-visited: lighten($color__link, 10%);
+$color__link-hover: darken($color__link, 20%);
 $color__link-active: $color__link-hover;
 
 $color__border-button: #ccc #ccc #bbb;
