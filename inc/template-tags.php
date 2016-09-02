@@ -20,7 +20,7 @@ function _bem_posted_on( $modifier = '' ) {
 	$modifier_author_link = '';
 	$modifier_date_wrapper = '';
 	$modifier_author_wrapper = '';
-	
+
 	if( is_string( $modifier ) ) {
 		$modifier_time = " _content__date--$modifier";
 		$modifier_time_updated = " _content__date-update--$modifier";
@@ -30,10 +30,9 @@ function _bem_posted_on( $modifier = '' ) {
 		$modifier_date_wrapper = " _content__date-wrapper--$modifier";
 		$modifier_author_wrapper = " _content__author-wrapper--$modifier";
 	}
-	
-	$time_string = '<time class="entry-date published updated _content__date _content__date--updated'.$modifier_time.'" datetime="%1$s">%2$s</time>';
+
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published _content__date'.$modifier_time.'" datetime="%1$s">%2$s</time><time class="updated _content__date-updated'.$modifier_time_updated.'" datetime="%3$s">%4$s</time>';
+		$time_string = '<time class="entry-date published _content__date'.$modifier_time.'" datetime="%1$s">%2$s</time>';
 	}
 
 	$time_string = sprintf( $time_string,
@@ -53,7 +52,8 @@ function _bem_posted_on( $modifier = '' ) {
 		'<span class="author vcard _content__author'.$modifier_author.'"><a class="url fn n _content__author-link'.$modifier_author_link.'" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author( ) ) . '</a></span>'
 	 );
 
-	echo '<span class="posted-on _content__date-wrapper'.$modifier_date_wrapper.'">' . $posted_on . '</span><span class="byline _content__author-wrapper'.$modifier_author_wrapper.'"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on _content__date-wrapper'.$modifier_date_wrapper.'">' . $posted_on . '</span>';
+	// <span class="byline _content__author-wrapper'.$modifier_author_wrapper.'"> ' . $byline . '</span>' // WPCS: XSS OK.
 
 }
 endif;
@@ -63,14 +63,14 @@ if ( ! function_exists( '_bem_entry_footer' ) ) :
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function _bem_entry_footer( $modifier = "" ) {
-		
+
 	if( is_string( $modifier ) ) {
 		$category_links = " _content__category-links--$modifier";
 		$tag_links = " _content__tag-links--$modifier";
 		$comments_links = " _content__comments-link--$modifier";
 		$edit_links = " _content__edit-item--$modifier";
 	}
-	
+
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type( ) ) {
 		/* translators: used between list items, there is a space after the comma */

@@ -5,8 +5,8 @@
 ._header__navigation-checkbox,
 ._header__navigation-toggler {
 	display: none;
-	
-	@include mq($until: desktop) {
+
+	@include mq($until: tablet) {
 		display: inline-block;
 	}
 }
@@ -22,8 +22,8 @@
 
 ._header__menu {
 	display: none;
-	
-	@include mq($from: desktop) {
+
+	@include mq($from: tablet) {
 		display: block;
 	}
 }
@@ -42,8 +42,8 @@
 	background-color: $color__header-menu;
 	padding: 0;
 	list-style: none;
-	
-	@include mq($from: desktop) {
+
+	@include mq($from: tablet) {
 		@include flex;
 		@include flex-justify--space-around;
 	}
@@ -51,8 +51,8 @@
 
 ._header__submenu-list {
 	@include flex-container--column;
-	
-	@include mq($from: desktop) {
+
+	@include mq($from: tablet) {
 		display: none;
 		position: absolute;
 		top: 100%;
@@ -69,7 +69,7 @@
 
 ._header__menu-link,
 ._header__submenu-link {
-	@include mq($from: desktop) {
+	@include mq($from: tablet) {
 		padding: $spacing-regular--half;
 	}
 }

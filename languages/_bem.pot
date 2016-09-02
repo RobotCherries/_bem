@@ -17,7 +17,14 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:21
+#: 404.php:22
+#@ _bem
+msgid "Search content"
+msgstr ""
+
+#: 404.php:23
+=======
+>>>>>>> release/0.7.1
 #@ _bem
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
@@ -212,6 +219,12 @@ msgstr ""
 #, php-format
 #@ _bem
 msgid "Edit %s"
+msgstr ""
+
+#: searchform.php:19
+#, php-format
+#@ _bem
+msgid "Search for"
 msgstr ""
 
 #: search.php:19
