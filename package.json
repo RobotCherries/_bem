@@ -1,6 +1,6 @@
 {
   "name": "underscores-bem",
-  "version": "0.7.1",
+  "version": "0.7.3",
   "description": "BEMified underscores theme template.",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "underscores",
     "wordpress"
   ],
-  "author": "maliMirkec <\u001b[D<>",
+  "author": "maliMirkec <malimirkeccita@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/maliMirkec/_bem/issues"

@@ -17,7 +17,7 @@
 			} else {
 				the_title( '<h2 class="entry-title _content__title _content__title--post"><a class="_content__title-link _content__title-link--post" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			}
-			
+
 			if ( has_post_thumbnail() ) {
 				?>
 				<div class="_post-thumbnail">
