@@ -17,16 +17,14 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-<<<<<<< HEAD
-#: 404.php:21
-=======
 #: 404.php:22
 #@ _bem
 msgid "Search content"
 msgstr ""
 
 #: 404.php:23
->>>>>>> release/1.1.0
+=======
+>>>>>>> release/0.7.1
 #@ _bem
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
@@ -171,7 +169,7 @@ msgstr ""
 #, php-format
 #@ _bem
 msgctxt "post date"
-msgid "Posted on %s"
+msgid "Posted on %s,"
 msgstr ""
 
 #: inc/template-tags.php:33
