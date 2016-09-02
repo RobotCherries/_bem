@@ -22,12 +22,10 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr "Ups! Zatražena stranica ne postoji!"
 
 # @ _bem
-#: 404.php:21 404.php:22
 msgid "Search content"
 msgstr "Pretraga sadržaja"
 
 # @ _s
-#: 404.php:23
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
