@@ -20,8 +20,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area _comments">
-
+<div id="comments" class="comments-area _comments"> 
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
@@ -138,6 +137,7 @@ if ( post_password_required() ) {
 
     'fields' => apply_filters( 'comment_form_default_fields', $fields ),
   ));
+  
   #comment_form(array(
 	#	'class_form' => '_comments__form',
 	#	'class_submit' => '_comments__form-submit'

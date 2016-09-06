@@ -14,6 +14,45 @@ object {
 	max-width: 100%;
 }
 
+[src*=".jpg"],
+[src*=".jpeg"],
+[src*=".png"],
+[src*=".gif"] {
+    display: block;
+    max-width: 100%;
+}
+
+figure {
+	margin: 0;
+	width: 100% !important;
+
+	&.aligncenter img {
+        margin: 0 auto;
+    }
+
+    &.alignleft img {
+        margin-right: auto;
+    }
+
+    &.alignright img {
+        margin-left: auto;
+    }
+}
+
+img {
+    &.aligncenter {
+        margin: 0 auto;
+    }
+
+    &.alignleft {
+        margin-right: auto;
+    }
+
+    &.alignright {
+        margin-left: auto;
+    }
+}
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
