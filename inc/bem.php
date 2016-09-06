@@ -2,7 +2,7 @@
 /**
  * Custom _bem classes
  *
- * @package _bem
+ * @package UnderscoresBem
  */
 
 /**

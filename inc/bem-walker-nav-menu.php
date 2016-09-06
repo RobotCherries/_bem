@@ -2,7 +2,7 @@
 /**
  * Custom _bem nav menu
  *
- * @package _bem
+ * @package UnderscoresBem
  */
 
 /**

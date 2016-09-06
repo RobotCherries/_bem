@@ -2,7 +2,7 @@
 /**
  * Custom _bem post links
  *
- * @package _bem
+ * @package UnderscoresBem
  */
 add_filter( 'next_post_link', '_bem_next_post_link' );
 add_filter( 'previous_post_link', '_bem_previous_post_link' );

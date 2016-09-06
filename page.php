@@ -9,32 +9,32 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package _bem
+ * @package UnderscoresBem
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area _content__wrapper _content__wrapper--page">
-		<main id="main" class="site-main _content__main _content__main--page" role="main">
+    <div id="primary" class="content-area _content__wrapper _content__wrapper--page">
+        <main id="main" class="site-main _content__main _content__main--page" role="main">
 
-			<?php
-			while ( have_posts() ) : the_post();
+    <?php
+    while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
+        get_template_part('template-parts/content', 'page');
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+        // If comments are open or we have at least one comment, load up the comment template.
+        if (comments_open() || get_comments_number() ) :
+            comments_template();
+        endif;
 
-			endwhile; // End of the loop.
-			?>
+    endwhile; // End of the loop.
+    ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+        </main><!-- #main -->
+    </div><!-- #primary -->
 
 <?php
-if ( has_post_format( 'aside' )) {
-  get_sidebar();
+if (has_post_format('aside')) {
+    get_sidebar();
 }
 get_footer();

@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package _bem
+ * @package UnderscoresBem
  */
 
 if ( ! function_exists( '_bem_posted_on' ) ) :

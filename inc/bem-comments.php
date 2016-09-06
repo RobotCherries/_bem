@@ -2,7 +2,7 @@
 /**
  * Custom _bem comments
  *
- * @package _bem
+ * @package UnderscoresBem
  */
 
 /**

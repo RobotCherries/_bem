@@ -2,7 +2,7 @@
 /**
  * _bem Theme Customizer.
  *
- * @package _bem
+ * @package UnderscoresBem
  */
 
 /**

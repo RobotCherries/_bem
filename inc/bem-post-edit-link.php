@@ -2,7 +2,7 @@
 /**
  * Custom _bem post edit link
  *
- * @package _bem
+ * @package UnderscoresBem
  */
 add_filter( 'edit_post_link', '_bem_edit_post_link' );
 
