@@ -163,6 +163,9 @@ blockquote:not(:last-child), cite:not(:last-child), ul:not(:last-child), ol:not(
 table {
   max-width: 100%; }
 
+blockquote, cite {
+  font-style: italic; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -355,9 +358,6 @@ table {
 --------------------------------------------------------------*/
 ._content {
   padding: 0.5rem; }
-  ._content blockquote {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; }
   ._content img {
     height: 100%; }
 
