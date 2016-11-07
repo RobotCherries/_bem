@@ -81,42 +81,27 @@ html {
 body {
   line-height: 1.5; }
 
-p {
-  margin-bottom: 0.75em; }
-  @media screen and (min-width: 25em) {
-    p {
-      margin-bottom: calc(0.75em + 0.25 * (100vw - 25em) / 25); } }
-  @media screen and (min-width: 50em) {
-    p {
-      margin-bottom: 1em; } }
+h1, h2, h3, h4, h5, h6, p, blockquote, cite, ul, ol, dl {
+  line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  line-height: 1.5; }
+  margin: 0; }
   h1:not(:first-child), h2:not(:first-child), h3:not(:first-child), h4:not(:first-child), h5:not(:first-child), h6:not(:first-child) {
-    margin-top: 1em; }
+    margin-top: 0.5em; }
     @media screen and (min-width: 25em) {
       h1:not(:first-child), h2:not(:first-child), h3:not(:first-child), h4:not(:first-child), h5:not(:first-child), h6:not(:first-child) {
-        margin-top: calc(1em + 0.25 * (100vw - 25em) / 25); } }
+        margin-top: calc(0.5em + 0.5 * (100vw - 25em) / 25); } }
     @media screen and (min-width: 50em) {
       h1:not(:first-child), h2:not(:first-child), h3:not(:first-child), h4:not(:first-child), h5:not(:first-child), h6:not(:first-child) {
-        margin-top: 1.25em; } }
+        margin-top: 1em; } }
   h1:not(:last-child), h2:not(:last-child), h3:not(:last-child), h4:not(:last-child), h5:not(:last-child), h6:not(:last-child) {
-    margin-bottom: 1em; }
+    margin-bottom: 0.5em; }
     @media screen and (min-width: 25em) {
       h1:not(:last-child), h2:not(:last-child), h3:not(:last-child), h4:not(:last-child), h5:not(:last-child), h6:not(:last-child) {
-        margin-bottom: calc(1em + 0.25 * (100vw - 25em) / 25); } }
+        margin-bottom: calc(0.5em + 0.5 * (100vw - 25em) / 25); } }
     @media screen and (min-width: 50em) {
       h1:not(:last-child), h2:not(:last-child), h3:not(:last-child), h4:not(:last-child), h5:not(:last-child), h6:not(:last-child) {
-        margin-bottom: 1.25em; } }
-  h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
-    margin-top: 1em; }
-    @media screen and (min-width: 25em) {
-      h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
-        margin-top: calc(1em + 0.25 * (100vw - 25em) / 25); } }
-    @media screen and (min-width: 50em) {
-      h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
-        margin-top: 1.25em; } }
+        margin-bottom: 1em; } }
 
 h1 {
   font-size: 2.441em; }
@@ -135,6 +120,48 @@ h5 {
 
 h6, small {
   font-size: .8em; }
+
+blockquote, cite, ul, ol, dl, p, table {
+  font-style: 1em; }
+
+p {
+  margin: 0;
+  margin-bottom: 0.5em; }
+  @media screen and (min-width: 25em) {
+    p {
+      margin-bottom: calc(0.5em + 0.5 * (100vw - 25em) / 25); } }
+  @media screen and (min-width: 50em) {
+    p {
+      margin-bottom: 1em; } }
+  p + p {
+    margin-top: 0.5em; }
+    @media screen and (min-width: 25em) {
+      p + p {
+        margin-top: calc(0.5em + 0.5 * (100vw - 25em) / 25); } }
+    @media screen and (min-width: 50em) {
+      p + p {
+        margin-top: 1em; } }
+
+blockquote:not(:first-child), cite:not(:first-child), ul:not(:first-child), ol:not(:first-child), dl:not(:first-child), table:not(:first-child), hr:not(:first-child), img:not(:first-child) {
+  margin-top: 0.5em; }
+  @media screen and (min-width: 25em) {
+    blockquote:not(:first-child), cite:not(:first-child), ul:not(:first-child), ol:not(:first-child), dl:not(:first-child), table:not(:first-child), hr:not(:first-child), img:not(:first-child) {
+      margin-top: calc(0.5em + 0.5 * (100vw - 25em) / 25); } }
+  @media screen and (min-width: 50em) {
+    blockquote:not(:first-child), cite:not(:first-child), ul:not(:first-child), ol:not(:first-child), dl:not(:first-child), table:not(:first-child), hr:not(:first-child), img:not(:first-child) {
+      margin-top: 1em; } }
+
+blockquote:not(:last-child), cite:not(:last-child), ul:not(:last-child), ol:not(:last-child), dl:not(:last-child), table:not(:last-child), hr:not(:last-child), img:not(:last-child) {
+  margin-bottom: 0.5em; }
+  @media screen and (min-width: 25em) {
+    blockquote:not(:last-child), cite:not(:last-child), ul:not(:last-child), ol:not(:last-child), dl:not(:last-child), table:not(:last-child), hr:not(:last-child), img:not(:last-child) {
+      margin-bottom: calc(0.5em + 0.5 * (100vw - 25em) / 25); } }
+  @media screen and (min-width: 50em) {
+    blockquote:not(:last-child), cite:not(:last-child), ul:not(:last-child), ol:not(:last-child), dl:not(:last-child), table:not(:last-child), hr:not(:last-child), img:not(:last-child) {
+      margin-bottom: 1em; } }
+
+table {
+  max-width: 100%; }
 
 /*--------------------------------------------------------------
 # Accessibility
