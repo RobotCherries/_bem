@@ -78,7 +78,11 @@
 ._header__submenu-link {
 	@include flex;
 	@include flexbox(1);
-	@include flex-justify--center;
+	@include flex-item--center;
+}
+
+._header__menu-link {
+	@include direction(column);
 }
 
 ._header__menu-item:hover > ._header__submenu-list {

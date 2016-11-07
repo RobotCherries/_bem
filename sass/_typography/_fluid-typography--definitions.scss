@@ -1,0 +1,51 @@
+body {
+    line-height: 1.5;
+}
+
+p {
+    @include fluid-type(margin-bottom, 25em, 50em, .75em, 1em);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    
+    &:not(:first-child) {
+        @include fluid-type(margin-top, 25em, 50em, 1em, 1.25em);
+    }
+    
+    &:not(:last-child) {
+        @include fluid-type(margin-bottom, 25em, 50em, 1em, 1.25em);
+    }
+    
+    + p {
+        @include fluid-type(margin-top, 25em, 50em, 1em, 1.25em);
+    }
+    
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2.441em;
+}
+
+h2 {
+    font-size: 1.953em;
+}
+
+h3 {
+    font-size: 1.563em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6, small {
+    font-size: .8em;
+}
+
+// @media screen
