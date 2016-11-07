@@ -1,6 +1,6 @@
 {
   "name": "underscores-bem",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "BEMified underscores theme template.",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,7 @@
     "bower": "latest",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
+    "gulp-bump": "^2.5.0",
     "gulp-sass": "latest",
     "require-dir": "latest"
   }
