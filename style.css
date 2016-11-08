@@ -68,7 +68,6 @@ if custom fonts used, define it here
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-/* Single property */
 html {
   font-size: 1em; }
   @media screen and (min-width: 25em) {
@@ -78,93 +77,121 @@ html {
     html {
       font-size: 1.25em; } }
 
-body {
-  line-height: 1.5; }
-
-h1, h2, h3, h4, h5, h6, p, blockquote, cite, ul, ol, dl {
+body, p, blockquote, cite, ul, ol, dl {
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0; }
   h1:not(:first-child), h2:not(:first-child), h3:not(:first-child), h4:not(:first-child), h5:not(:first-child), h6:not(:first-child) {
-    margin-top: 0.5em; }
+    margin-top: 1rem; }
     @media screen and (min-width: 25em) {
       h1:not(:first-child), h2:not(:first-child), h3:not(:first-child), h4:not(:first-child), h5:not(:first-child), h6:not(:first-child) {
-        margin-top: calc(0.5em + 0.5 * (100vw - 25em) / 25); } }
+        margin-top: calc(1rem + 0.5 * (100vw - 25em) / 25); } }
     @media screen and (min-width: 50em) {
       h1:not(:first-child), h2:not(:first-child), h3:not(:first-child), h4:not(:first-child), h5:not(:first-child), h6:not(:first-child) {
-        margin-top: 1em; } }
+        margin-top: 1.5rem; } }
   h1:not(:last-child), h2:not(:last-child), h3:not(:last-child), h4:not(:last-child), h5:not(:last-child), h6:not(:last-child) {
-    margin-bottom: 0.5em; }
+    margin-bottom: 1rem; }
     @media screen and (min-width: 25em) {
       h1:not(:last-child), h2:not(:last-child), h3:not(:last-child), h4:not(:last-child), h5:not(:last-child), h6:not(:last-child) {
-        margin-bottom: calc(0.5em + 0.5 * (100vw - 25em) / 25); } }
+        margin-bottom: calc(1rem + 0.5 * (100vw - 25em) / 25); } }
     @media screen and (min-width: 50em) {
       h1:not(:last-child), h2:not(:last-child), h3:not(:last-child), h4:not(:last-child), h5:not(:last-child), h6:not(:last-child) {
-        margin-bottom: 1em; } }
+        margin-bottom: 1.5rem; } }
 
 h1 {
-  font-size: 2.441em; }
+  font-size: 2.441em;
+  line-height: calc(3 / 2.441); }
 
 h2 {
-  font-size: 1.953em; }
+  font-size: 1.953em;
+  line-height: calc(2 / 1.953); }
 
 h3 {
-  font-size: 1.563em; }
+  font-size: 1.563em;
+  line-height: calc(2 / 1.563); }
 
 h4 {
-  font-size: 1.25em; }
+  font-size: 1.25em;
+  line-height: calc(2 / 1.25); }
 
 h5 {
+  font-size: 1em;
+  line-height: calc(2 / 1); }
+
+h6 {
+  font-size: .8em;
+  line-height: calc(1 / .8); }
+
+blockquote, cite, pre, dfn, ul, ol, dl, p, table {
   font-size: 1em; }
-
-h6, small {
-  font-size: .8em; }
-
-blockquote, cite, ul, ol, dl, p, table {
-  font-style: 1em; }
 
 p {
   margin: 0;
-  margin-bottom: 0.5em; }
+  margin-bottom: 1rem; }
   @media screen and (min-width: 25em) {
     p {
-      margin-bottom: calc(0.5em + 0.5 * (100vw - 25em) / 25); } }
+      margin-bottom: calc(1rem + 0.5 * (100vw - 25em) / 25); } }
   @media screen and (min-width: 50em) {
     p {
-      margin-bottom: 1em; } }
+      margin-bottom: 1.5rem; } }
   p + p {
-    margin-top: 0.5em; }
+    margin-top: 1rem; }
     @media screen and (min-width: 25em) {
       p + p {
-        margin-top: calc(0.5em + 0.5 * (100vw - 25em) / 25); } }
+        margin-top: calc(1rem + 0.5 * (100vw - 25em) / 25); } }
     @media screen and (min-width: 50em) {
       p + p {
-        margin-top: 1em; } }
+        margin-top: 1.5rem; } }
 
-blockquote:not(:first-child), cite:not(:first-child), ul:not(:first-child), ol:not(:first-child), dl:not(:first-child), table:not(:first-child), hr:not(:first-child), img:not(:first-child) {
-  margin-top: 0.5em; }
+blockquote:not(:first-child), cite:not(:first-child), pre:not(:first-child), dfn:not(:first-child), ul:not(:first-child), ol:not(:first-child), dl:not(:first-child), table:not(:first-child), hr:not(:first-child), img:not(:first-child) {
+  margin-top: 1rem; }
   @media screen and (min-width: 25em) {
-    blockquote:not(:first-child), cite:not(:first-child), ul:not(:first-child), ol:not(:first-child), dl:not(:first-child), table:not(:first-child), hr:not(:first-child), img:not(:first-child) {
-      margin-top: calc(0.5em + 0.5 * (100vw - 25em) / 25); } }
+    blockquote:not(:first-child), cite:not(:first-child), pre:not(:first-child), dfn:not(:first-child), ul:not(:first-child), ol:not(:first-child), dl:not(:first-child), table:not(:first-child), hr:not(:first-child), img:not(:first-child) {
+      margin-top: calc(1rem + 0.5 * (100vw - 25em) / 25); } }
   @media screen and (min-width: 50em) {
-    blockquote:not(:first-child), cite:not(:first-child), ul:not(:first-child), ol:not(:first-child), dl:not(:first-child), table:not(:first-child), hr:not(:first-child), img:not(:first-child) {
-      margin-top: 1em; } }
+    blockquote:not(:first-child), cite:not(:first-child), pre:not(:first-child), dfn:not(:first-child), ul:not(:first-child), ol:not(:first-child), dl:not(:first-child), table:not(:first-child), hr:not(:first-child), img:not(:first-child) {
+      margin-top: 1.5rem; } }
 
-blockquote:not(:last-child), cite:not(:last-child), ul:not(:last-child), ol:not(:last-child), dl:not(:last-child), table:not(:last-child), hr:not(:last-child), img:not(:last-child) {
-  margin-bottom: 0.5em; }
+blockquote:not(:last-child), cite:not(:last-child), pre:not(:last-child), dfn:not(:last-child), ul:not(:last-child), ol:not(:last-child), dl:not(:last-child), table:not(:last-child), hr:not(:last-child), img:not(:last-child) {
+  margin-bottom: 1rem; }
   @media screen and (min-width: 25em) {
-    blockquote:not(:last-child), cite:not(:last-child), ul:not(:last-child), ol:not(:last-child), dl:not(:last-child), table:not(:last-child), hr:not(:last-child), img:not(:last-child) {
-      margin-bottom: calc(0.5em + 0.5 * (100vw - 25em) / 25); } }
+    blockquote:not(:last-child), cite:not(:last-child), pre:not(:last-child), dfn:not(:last-child), ul:not(:last-child), ol:not(:last-child), dl:not(:last-child), table:not(:last-child), hr:not(:last-child), img:not(:last-child) {
+      margin-bottom: calc(1rem + 0.5 * (100vw - 25em) / 25); } }
   @media screen and (min-width: 50em) {
-    blockquote:not(:last-child), cite:not(:last-child), ul:not(:last-child), ol:not(:last-child), dl:not(:last-child), table:not(:last-child), hr:not(:last-child), img:not(:last-child) {
-      margin-bottom: 1em; } }
+    blockquote:not(:last-child), cite:not(:last-child), pre:not(:last-child), dfn:not(:last-child), ul:not(:last-child), ol:not(:last-child), dl:not(:last-child), table:not(:last-child), hr:not(:last-child), img:not(:last-child) {
+      margin-bottom: 1.5rem; } }
 
 table {
   max-width: 100%; }
 
-blockquote, cite {
+blockquote, cite, dfn, cite, em, i {
   font-style: italic; }
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  max-width: 100%;
+  overflow: auto; }
+
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; }
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help; }
+
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none; }
+
+big {
+  font-size: 1.25em;
+  line-height: calc(2 / 1.25); }
+
+small {
+  font-size: .8em;
+  line-height: calc(1 / .8); }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -696,85 +723,6 @@ img.alignright {
       padding-right: 0.5rem; }
   ._gallery__item--9 {
     width: calc(11.11111 * 1% - 0.44444rem);
-    flex-basis: calc(11.11111 * 1% - 0.44444rem);
-    margin-bottom: 0.5rem; }
-    ._gallery__item--9:nth-of-type(9n+1) {
-      padding-right: 0.5rem; }
-    ._gallery__item--9:nth-of-type(9n+2) {
-      padding-right: 0.5rem; }
-    ._gallery__item--9:nth-of-type(9n+3) {
-      padding-right: 0.5rem; }
-    ._gallery__item--9:nth-of-type(9n+4) {
-      padding-right: 0.5rem; }
-    ._gallery__item--9:nth-of-type(9n+5) {
-      padding-right: 0.5rem; }
-    ._gallery__item--9:nth-of-type(9n+6) {
-      padding-right: 0.5rem; }
-    ._gallery__item--9:nth-of-type(9n+7) {
-      padding-right: 0.5rem; }
-    ._gallery__item--9:nth-of-type(9n+8) {
-      padding-right: 0.5rem; } }
-
-/*--------------------------------------------------------------
-# Theme
---------------------------------------------------------------*/
-7 * 1% - 0.41667rem);
-    -webkit-flex-basis: calc(16.66667 * 1% - 0.41667rem);
-    -ms-flex-preferred-size: calc(16.66667 * 1% - 0.41667rem);
-    flex-basis: calc(16.66667 * 1% - 0.41667rem);
-    margin-bottom: 0.5rem; }
-    ._gallery__item--6:nth-of-type(6n+1) {
-      padding-right: 0.5rem; }
-    ._gallery__item--6:nth-of-type(6n+2) {
-      padding-right: 0.5rem; }
-    ._gallery__item--6:nth-of-type(6n+3) {
-      padding-right: 0.5rem; }
-    ._gallery__item--6:nth-of-type(6n+4) {
-      padding-right: 0.5rem; }
-    ._gallery__item--6:nth-of-type(6n+5) {
-      padding-right: 0.5rem; }
-  ._gallery__item--7 {
-    width: calc(14.28571 * 1% - 0.42857rem);
-    -webkit-flex-basis: calc(14.28571 * 1% - 0.42857rem);
-    -ms-flex-preferred-size: calc(14.28571 * 1% - 0.42857rem);
-    flex-basis: calc(14.28571 * 1% - 0.42857rem);
-    margin-bottom: 0.5rem; }
-    ._gallery__item--7:nth-of-type(7n+1) {
-      padding-right: 0.5rem; }
-    ._gallery__item--7:nth-of-type(7n+2) {
-      padding-right: 0.5rem; }
-    ._gallery__item--7:nth-of-type(7n+3) {
-      padding-right: 0.5rem; }
-    ._gallery__item--7:nth-of-type(7n+4) {
-      padding-right: 0.5rem; }
-    ._gallery__item--7:nth-of-type(7n+5) {
-      padding-right: 0.5rem; }
-    ._gallery__item--7:nth-of-type(7n+6) {
-      padding-right: 0.5rem; }
-  ._gallery__item--8 {
-    width: calc(12.5 * 1% - 0.4375rem);
-    -webkit-flex-basis: calc(12.5 * 1% - 0.4375rem);
-    -ms-flex-preferred-size: calc(12.5 * 1% - 0.4375rem);
-    flex-basis: calc(12.5 * 1% - 0.4375rem);
-    margin-bottom: 0.5rem; }
-    ._gallery__item--8:nth-of-type(8n+1) {
-      padding-right: 0.5rem; }
-    ._gallery__item--8:nth-of-type(8n+2) {
-      padding-right: 0.5rem; }
-    ._gallery__item--8:nth-of-type(8n+3) {
-      padding-right: 0.5rem; }
-    ._gallery__item--8:nth-of-type(8n+4) {
-      padding-right: 0.5rem; }
-    ._gallery__item--8:nth-of-type(8n+5) {
-      padding-right: 0.5rem; }
-    ._gallery__item--8:nth-of-type(8n+6) {
-      padding-right: 0.5rem; }
-    ._gallery__item--8:nth-of-type(8n+7) {
-      padding-right: 0.5rem; }
-  ._gallery__item--9 {
-    width: calc(11.11111 * 1% - 0.44444rem);
-    -webkit-flex-basis: calc(11.11111 * 1% - 0.44444rem);
-    -ms-flex-preferred-size: calc(11.11111 * 1% - 0.44444rem);
     flex-basis: calc(11.11111 * 1% - 0.44444rem);
     margin-bottom: 0.5rem; }
     ._gallery__item--9:nth-of-type(9n+1) {

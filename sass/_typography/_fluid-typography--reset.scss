@@ -1,4 +1,10 @@
-/* Single property */
+$baseline: 1.5rem;
+$baseline--mobile: 1rem;
+$font-size: 1.25em;
+$font-size--mobile: 1em;
+$breakpoint--low: 25em;
+$breakpoint--high: 50em;
+
 html {
-    @include fluid-type(font-size, 25em, 50em, 1em, 1.25em);
+    @include fluid-type(font-size, $breakpoint--low, $breakpoint--high, $font-size--mobile, $font-size);
 }
