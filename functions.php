@@ -77,10 +77,10 @@ function _bem_setup() {
 		'default-image' => '',
 	) ) );
 
-	add_image_size( ‘thumbnail’, 400, 300, true );
-	add_image_size( ‘medium’, 600, 450, true );
-	add_image_size( ‘large’, 800, 600, true );
-	add_image_size( ‘post-thumbnail’, 800, 600, true );
+	add_image_size( 'thumbnail', 400, 300, true );
+	add_image_size( 'medium', 600, 450, true );
+	add_image_size( 'large', 800, 600, true );
+	add_image_size( 'post-thumbnail', 800, 600, true );
 }
 endif;
 add_action( 'after_setup_theme', '_bem_setup' );
