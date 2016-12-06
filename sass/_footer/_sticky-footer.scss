@@ -3,6 +3,7 @@
 	@include direction(column);
 	min-height: 100vh;
 
+	// sticky footer for logged user
 	.admin-bar & {
 		min-height: calc(100vh - 32px);
 	}
