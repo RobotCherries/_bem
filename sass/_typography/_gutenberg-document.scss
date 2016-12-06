@@ -1,0 +1,8 @@
+$document-font-size--mobile: .75em;
+$document-font-size: 1.25em;
+
+html {
+    @include fluid-type(font-size, $mq-mobile, $mq-desktop, $document-font-size--mobile, $document-font-size);
+}
+
+

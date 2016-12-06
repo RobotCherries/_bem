@@ -3,6 +3,7 @@ see gutenberg-config
 if custom fonts used, define it here
 */
 $default-font-size: 16; // without unit
+$default-font-size--mobile: 12; // without unit
 
 $font__theme: custom;
 $font__body: Georgia, serif;
