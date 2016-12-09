@@ -98,8 +98,8 @@ function _bem_entry_footer( $modifier = "" ) {
 			esc_html__( 'Edit %s', '_bem' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		 ),
-		'<span class="edit-link _content__edit-item'.$edit_links.'">',
-		'</span>'
+		'<div class="edit-link _content__edit-item'.$edit_links.'">',
+		'</div>'
 	 );
 }
 endif;

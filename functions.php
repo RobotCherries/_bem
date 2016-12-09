@@ -133,6 +133,39 @@ function _bem_scripts() {
 add_action( 'wp_enqueue_scripts', '_bem_scripts' );
 
 /**
+* Disable search feature
+*/
+// function _bem_disable_search( $query, $error = true ) {
+// 	if ( is_search() ) {
+// 		$query->is_search = false;
+// 		$query->query_vars[s] = false;
+// 		$query->query[s] = false;
+// 		// to error
+// 		if ( $error == true ) {
+// 			$query->is_404 = true;
+// 		}
+// 	}
+// }
+// 
+// add_action( 'parse_query', '_bem_disable_search' );
+
+/**
+* Remove taxonomy from title
+*/
+// function _bem_get_the_achive_title( $title ) {
+// 	if ( is_category() ) {
+// 		$title = single_cat_title( '', false );
+// 	} elseif ( is_tag() ) {
+// 		$title = single_tag_title( '', false );
+// 	} elseif ( is_author() ) {
+// 		$title = '<span class="vcard">' . get_the_author() . '</span>' ;
+// 	}
+// 	return $title;
+// }
+// 
+// add_filter( 'get_the_archive_title', '_bem_get_the_achive_title' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
