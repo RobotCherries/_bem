@@ -52,7 +52,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-if ( has_post_format( 'aside' )) {
-  get_sidebar();
+if ( has_post_format( 'aside' ) ) {
+	get_sidebar();
 }
 get_footer();

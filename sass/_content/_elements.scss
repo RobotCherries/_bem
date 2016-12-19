@@ -10,10 +10,11 @@
 	margin-top: $spacing-regular--half;
 }
 
-._content__comments-link + ._content__edit-item {
-	margin-left: $spacing-regular--half
-}
-
 ._post-navigation__item:empty {
 	display: none;
+}
+
+._content__edit-link {
+    clear: both;
+    display: inline-block;
 }

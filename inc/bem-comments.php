@@ -6,17 +6,17 @@
  */
 
 /**
- * Custom comments
- * @param $comment
- * @param $args
- * @param $depth
+ * _bem comments
+ *
+ * @param string  $comment Accepts comment string.
+ * @param array   $args    Accepts argument array.
+ * @param integer $depth   Accepts depth integer.
  */
 function _bem_comments( $comment, $args, $depth ) {
-	$GLOBALS[ 'comment' ] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
 		case 'trackback' :
-			if ( 'div' == $args[ 'style' ] ) {
+			if ( 'div' === $args['style'] ) {
 				$tag = 'div';
 				$add_below = 'comment';
 			} else {
@@ -35,19 +35,19 @@ function _bem_comments( $comment, $args, $depth ) {
 				<article id="div-comment-<?php comment_ID(); ?>" class="comment-body _comments__article">
 					<footer class="comment-meta __comments__footer">
 						<div class="comment-author vcard _comments__author">
-							<?php if ( 0 != $args[ 'avatar_size' ] ) echo get_avatar( $comment, $args[ 'avatar_size' ], null, null, array( 'class' => '_comments__avatar' ) ); ?>
-							<?php printf( __( '%s <span class="says _comments__author-says">says:</span>' ), sprintf( '<b class="fn _comments__author-name">%s</b>', get_comment_author_link() ) ); ?>
+							<?php if ( 0 !== $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'], null, null, array( 'class' => '_comments__avatar' ) );} ?>
+							<?php printf( esc_html__( '%s says:' ), sprintf( '<b class="fn _comments__author-name">%s</b>', get_comment_author_link() ) ); ?>
 						</div><!-- .comment-author -->
 
 						<div class="comment-metadata _comments__metadata">
 							<a class="_comments__metadata-link" href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 								<time class="_comments__metadata-time" datetime="<?php comment_time( 'c' ); ?>">
-									<?php printf( _x( '%1$s at %2$s', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?>
+									<?php printf( esc_html_x( '%1$s at %2$s', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?>
 								</time>
 							</a>
 							<?php edit_comment_link( __( 'Edit', 'pietergoosen' ), '<span class="edit-link _comments__edit-item">', '</span>' ); ?>
 						</div><!-- .comment-metadata -->
-						<?php if ( '0' == $comment->comment_approved ) : ?>
+						<?php if ( '0' === $comment->comment_approved ) : ?>
 							<p class="comment-awaiting-moderation _comments__awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'pietergoosen' ); ?></p>
 						<?php endif; ?>
 					</footer><!-- .comment-meta -->
@@ -56,7 +56,7 @@ function _bem_comments( $comment, $args, $depth ) {
 					</div><!-- .comment-content -->
 
 					<div class="reply _comments__reply-item">
-						<?php comment_reply_link( array_merge( $args, array( 'add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args[ 'max_depth' ] ) ) ); ?>
+						<?php comment_reply_link( array_merge( $args, array( 'add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 					</div><!-- .reply -->
 				</article><!-- .comment-body -->
 			<?php
@@ -68,18 +68,20 @@ add_filter( 'edit_comment_link', '_bem_edit_comment_link' );
 
 /**
  * Custom comment edit link
- * @param $output string
+ *
+ * @param string $output Accepts output string.
  */
-function _bem_edit_comment_link($output) {
-	return str_replace( 'comment-edit-link', 'comment-edit-link _comments__edit-link', $output);
+function _bem_edit_comment_link( $output ) {
+	return str_replace( 'comment-edit-link', 'comment-edit-link _comments__edit-link', $output );
 }
 
 add_filter( 'comment_reply_link', '_bem_comment_reply_link' );
 
 /**
  * Custom comment reply link
- * @param $output string
+ *
+ * @param string $output Accepts output string.
  */
-function _bem_comment_reply_link($output) {
-	return str_replace( 'comment-reply-link', 'comment-reply-link _comments__reply-link', $output);
+function _bem_comment_reply_link( $output ) {
+	return str_replace( 'comment-reply-link', 'comment-reply-link _comments__reply-link', $output );
 }

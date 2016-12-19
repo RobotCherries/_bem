@@ -26,25 +26,25 @@ get_header(); ?>
 						the_widget( 'WP_Widget_Recent_Posts' );
 
 						// Only show the widget if site has multiple categories.
-						if ( _bem_categorized_blog() ) :
+					if ( _bem_categorized_blog() ) :
 					?>
 
 					<div class="widget widget_categories _content__categories _content__category--404">
-						<h2 class="widget-title _content__category-title _content__category-title--404"><?php esc_html_e( 'Most Used Categories', '_bem' ); ?></h2>
-						<ul class="_content__category-list">
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
+					<h2 class="widget-title _content__category-title _content__category-title--404"><?php esc_html_e( 'Most Used Categories', '_bem' ); ?></h2>
+					<ul class="_content__category-list">
 					<?php
+					wp_list_categories( array(
+						'orderby'    => 'count',
+						'order'      => 'DESC',
+						'show_count' => 1,
+						'title_li'   => '',
+						'number'     => 10,
+					) );
+				?>
+				</ul>
+				</div><!-- .widget -->
+
+				<?php
 						endif;
 
 						/* translators: %1$s: smiley */
