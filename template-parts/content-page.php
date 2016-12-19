@@ -33,8 +33,8 @@
 					esc_html__( 'Edit %s', '_bem' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),
-				'<span class="edit-link _content__edit-item _content__edit-item--page">',
-				'</span>'
+				'<div class="edit-link _content__edit-item _content__edit-item--page">',
+				'</div>'
 			);
 		?>
 	</footer><!-- .entry-footer -->
