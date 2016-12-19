@@ -8,80 +8,80 @@
  */
 
 if ( ! function_exists( '_bem_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function _bem_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on _bem, use a find and replace
-	 * to change '_bem' to the name of your theme in all the template files.
-	 */
-	load_theme_textdomain( '_bem', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
 	 */
-	add_theme_support( 'post-thumbnails' );
+	function _bem_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on _bem, use a find and replace
+		 * to change '_bem' to the name of your theme in all the template files.
+		 */
+		load_theme_textdomain( '_bem', get_template_directory() . '/languages' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', '_bem' ),
-	) );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+		add_theme_support( 'title-tag' );
 
-	/*
-	 * Enable support for Post Formats.
-	 * See https://developer.wordpress.org/themes/functionality/post-formats/
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( '_bem_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus( array(
+			'primary' => esc_html__( 'Primary', '_bem' ),
+		) );
 
-	add_image_size( 'thumbnail', 400, 300, true );
-	add_image_size( 'medium', 600, 450, true );
-	add_image_size( 'large', 800, 600, true );
-	add_image_size( 'post-thumbnail', 800, 600, true );
-}
+			/*
+             * Switch default core markup for search form, comment form, and comments
+             * to output valid HTML5.
+			 */
+			add_theme_support( 'html5', array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			) );
+
+			/*
+             * Enable support for Post Formats.
+             * See https://developer.wordpress.org/themes/functionality/post-formats/
+			 */
+			add_theme_support( 'post-formats', array(
+				'aside',
+				'image',
+				'video',
+				'quote',
+				'link',
+			) );
+
+			// Set up the WordPress core custom background feature.
+			add_theme_support( 'custom-background', apply_filters( '_bem_custom_background_args', array(
+				'default-color' => 'ffffff',
+				'default-image' => '',
+			) ) );
+
+			add_image_size( 'thumbnail', 400, 300, true );
+			add_image_size( 'medium', 600, 450, true );
+			add_image_size( 'large', 800, 600, true );
+			add_image_size( 'post-thumbnail', 800, 600, true );
+	}
 endif;
 add_action( 'after_setup_theme', '_bem_setup' );
 
@@ -107,7 +107,7 @@ function _bem_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', '_bem' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
-    'class'         => '_sidebar',
+		'class'         => '_sidebar',
 		'before_widget' => '<section id="%1$s" class="widget _widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title _widget__title">',
@@ -132,39 +132,43 @@ function _bem_scripts() {
 }
 add_action( 'wp_enqueue_scripts', '_bem_scripts' );
 
-/**
-* Disable search feature
-*/
+// /**
+// * Disable search feature
+// *
+// * @param string  $query Accepts query string.
+// * @param boolean $error Is error.
+// */
 // function _bem_disable_search( $query, $error = true ) {
-// 	if ( is_search() ) {
-// 		$query->is_search = false;
-// 		$query->query_vars[s] = false;
-// 		$query->query[s] = false;
-// 		// to error
-// 		if ( $error == true ) {
-// 			$query->is_404 = true;
-// 		}
-// 	}
+// if ( is_search() ) {
+// $query->is_search = false;
+// $query->query_vars[ s ] = false;
+// $query->query[ s ] = false;
+// To error.
+// if ( true === $error ) {
+// $query->is_404 = true;
 // }
-// 
+// }
+// }
+//
 // add_action( 'parse_query', '_bem_disable_search' );
-
-/**
-* Remove taxonomy from title
-*/
+//
+// /**
+// * Remove taxonomy from title
+// *
+// * @param  string $title Accepts title string.
+// */
 // function _bem_get_the_achive_title( $title ) {
-// 	if ( is_category() ) {
-// 		$title = single_cat_title( '', false );
-// 	} elseif ( is_tag() ) {
-// 		$title = single_tag_title( '', false );
-// 	} elseif ( is_author() ) {
-// 		$title = '<span class="vcard">' . get_the_author() . '</span>' ;
-// 	}
-// 	return $title;
+// if ( is_category() ) {
+// $title = single_cat_title( '', false );
+// } elseif ( is_tag() ) {
+// $title = single_tag_title( '', false );
+// } elseif ( is_author() ) {
+// $title = '<span class="vcard">' . get_the_author() . '</span>' ;
 // }
-// 
+// return $title;
+// }
+//
 // add_filter( 'get_the_archive_title', '_bem_get_the_achive_title' );
-
 /**
  * Implement the Custom Header feature.
  */
