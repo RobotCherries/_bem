@@ -6,6 +6,14 @@
 	}
 }
 
+._content__meta-time {
+    font-size: 70%;
+    
+    &:not(:last-of-type) {
+        margin-right: 1rem;
+    }
+}
+
 ._content__footer {
 	margin-top: $spacing-regular--half;
 }

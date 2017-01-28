@@ -376,8 +376,6 @@ h6 {
 a {
   color: royalblue;
   transition: all 0.3s ease-out; }
-  a:visited {
-    color: #6d8ce8; }
   a:hover, a:focus {
     color: #1a3ca2; }
   a:active {
@@ -606,6 +604,11 @@ big {
   padding: 0.5rem; }
   ._content img {
     height: 100%; }
+
+._content__meta-time {
+  font-size: 70%; }
+  ._content__meta-time:not(:last-of-type) {
+    margin-right: 1rem; }
 
 ._content__footer {
   margin-top: 0.5rem; }
