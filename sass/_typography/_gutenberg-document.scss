@@ -1,8 +1,7 @@
-$document-font-size--mobile: .75em;
-$document-font-size: 1.25em;
+$document-font-size--mobile: .8em;
+$document-font-size: 1.2em;
 
 html {
+    critical: this;
     @include fluid-type(font-size, $mq-mobile, $mq-desktop, $document-font-size--mobile, $document-font-size);
 }
-
-

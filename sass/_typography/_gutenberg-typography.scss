@@ -37,6 +37,7 @@ $font-headings: null;
 
 // Font defaults
 html {
+    critical: this;
     // font-size: #{$base + 'px'};
     // font-size: #{$base-font-size + '%'};
     font-family: $font-body;
@@ -45,8 +46,8 @@ html {
 
 // Line-height & margin reset
 * {
+    critical: this;
     @include line-height(1.0344826);
-    margin: 0;
 }
 
 
@@ -54,20 +55,22 @@ html {
 ========================================================================== */
 
 @if $paragraph-indent == true {
-
     p + p {
+        critical: this;
         @include margin-top(-1);
         text-indent: #{ $leading + 'px'};
         text-indent: #{ $leading-rem + 'rem'};
     }
 
     .attention-grabber + p {
+        critical: this;
         margin-top: 0;
         text-indent: 0;
     }
 }
 
 p + p {
+    critical: this;
     @include margin-top(.5);
 }
 
@@ -77,6 +80,7 @@ p + p {
 // Set headings sizes, line-heights and margins
 @each $heading, $properties in $headings {
     #{$heading} {
+        critical: this;
         @include font-size(nth($properties, 1));
         @include line-height(nth($properties, 2));
         @include margin-top(nth($properties, 3));
@@ -86,20 +90,24 @@ p + p {
 
 // Set margins between headings
 h1 + h2 {
+    critical: this;
     @include margin-top(1);
 }
 
 h2 + h3,
 h3 + h4,
 h4 + h5 {
+    critical: this;
     @include margin-top(.5);
 }
 
 h5 + h6 {
+    critical: this;
     @include margin-top(-.5);
 }
 
 h6 {
+    critical: this;
     font-style: italic;
     font-weight: normal;
 }
@@ -112,6 +120,7 @@ h6 {
     h4,
     h5,
     h6 {
+        critical: this;
         font-family: $font-headings;
     }
 }
@@ -120,15 +129,18 @@ h6 {
 ========================================================================== */
 
 a {
+    critical: this;
     color: $color-link-normal;
     transition: all $transition-duration--regular $transition-animation--default;
 
     &:hover,
     &:focus {
+        critical: this;
         color: $color-link-hover;
     }
 
     &:active {
+        critical: this;
         color: $color-link-active;
     }
 }
@@ -169,12 +181,14 @@ figure blockquote {
 ul,
 ol {
     li {
+        critical: this;
         margin-bottom: 0;
     }
 }
 
 // Horizontal rule
 hr {
+    critical: this;
     @include margin-top($hr-margin);
     @include margin-bottom($hr-margin);
     border: 0;
@@ -201,6 +215,7 @@ hr {
         text-align: center;
 
         &:before {
+            critical: this;
             content: $hr-type-content;
             letter-spacing: $hr-type-char-spacing;
         }

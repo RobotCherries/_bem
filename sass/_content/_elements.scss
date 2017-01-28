@@ -1,28 +1,25 @@
 ._content {
+    critical: this;
 	padding: $spacing-regular--half;
-	
+
 	img {
+        critical: this;
 		height: 100%;
 	}
 }
 
-._content__meta-time {
-    font-size: 70%;
-    
-    &:not(:last-of-type) {
-        margin-right: 1rem;
-    }
-}
-
 ._content__footer {
+    critical: this;
 	margin-top: $spacing-regular--half;
 }
 
 ._post-navigation__item:empty {
+    critical: this;
 	display: none;
 }
 
 ._content__edit-link {
+    critical: this;
     clear: both;
     display: inline-block;
 }
