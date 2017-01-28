@@ -6,9 +6,13 @@ $default-font-size: 16; // without unit
 $default-font-size--mobile: 12; // without unit
 
 $font__theme: custom;
-$font__body: Georgia, serif;
-$font__headings: Georgia, serif;
-$font__forms: Georgia, serif;
+$font__custom: -apple-system, BlinkMacSystemFont,
+"Segoe UI", "Roboto", "Oxygen",
+"Ubuntu", "Cantarell", "Fira Sans",
+"Droid Sans", "Helvetica Neue", sans-serif;
+$font__body: $font__custom;
+$font__headings: $font__custom;
+$font__forms: $font__custom;
 
 /* see gutenberg-config */
 $font__pre: "Courier 10 Pitch", Courier, monospace;

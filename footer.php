@@ -21,7 +21,7 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/dist/style.css'; ?>">
 <?php wp_footer(); ?>
 
 </body>

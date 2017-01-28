@@ -13,49 +13,48 @@ if ( ! function_exists( '_bem_posted_on' ) ) :
 	 *
 	 * @param string $modifier Accepts modifier string.
 	 */
-	function _bem_posted_on( $modifier = '' ) {
-		$modifier_time = '';
-		$modifier_time_updated = '';
-		$modifier_posted_on = '';
-		$modifier_author = '';
-		$modifier_author_link = '';
-		$modifier_date_wrapper = '';
-		$modifier_author_wrapper = '';
-
-		if ( is_string( $modifier ) ) {
-			$modifier_time = " _content__date--$modifier";
-			$modifier_time_updated = " _content__date-update--$modifier";
-			$modifier_posted_on = " _content__date-link--$modifier";
-			$modifier_author = " _content__author--$modifier";
-			$modifier_author_link = " _content__author-link--$modifier";
-			$modifier_date_wrapper = " _content__date-wrapper--$modifier";
-			$modifier_author_wrapper = " _content__author-wrapper--$modifier";
-		}
-
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published _content__date' . $modifier_time . '" datetime="%1$s">%2$s</time>';
-		}
-
-		$time_string = sprintf( $time_string,
-			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date( ) ),
-			esc_attr( get_the_modified_date( 'c' ) ),
-			esc_html( get_the_modified_date( ) )
-		);
-
-			$posted_on = sprintf(
-				esc_html_x( 'Posted on %s', 'post date', '_bem' ),
-				'<a class="_content__date-link' . $modifier_posted_on . '" href="' . esc_url( get_permalink( ) ) . '" rel="bookmark">' . $time_string . '</a>'
-			);
-
-			$byline = sprintf(
-				esc_html_x( 'by %s', 'post author', '_bem' ),
-				'<span class="author vcard _content__author' . $modifier_author . '"><a class="url fn n _content__author-link' . $modifier_author_link . '" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author( ) ) . '</a></span>'
-			);
-
-			echo '<span class="posted-on _content__date-wrapper' . $modifier_date_wrapper . '">' . $posted_on . '</span>';
-			// <span class="byline _content__author-wrapper'.$modifier_author_wrapper.'"> ' . $byline . '</span>' // WPCS: XSS OK.
-	}
+    function _bem_posted_on( $modifier = '' ) {
+ 		$modifier_time = '';
+ 		$modifier_time_updated = '';
+ 		$modifier_posted_on = '';
+ 		$modifier_author = '';
+ 		$modifier_author_link = '';
+ 		$modifier_date_wrapper = '';
+ 		$modifier_author_wrapper = '';
+ 
+ 		if ( is_string( $modifier ) ) {
+ 			$modifier_time = " _content__date--$modifier";
+ 			$modifier_time_updated = " _content__date-update--$modifier";
+ 			$modifier_posted_on = " _content__date-link--$modifier";
+ 			$modifier_author = " _content__author--$modifier";
+ 			$modifier_author_link = " _content__author-link--$modifier";
+ 			$modifier_date_wrapper = " _content__date-wrapper--$modifier";
+ 			$modifier_update_wrapper = " _content__update-wrapper--$modifier";
+ 			$modifier_author_wrapper = " _content__author-wrapper--$modifier";
+ 		}
+ 
+     	$time_string = esc_html( get_the_date( ) );
+ 
+     	$posted_on = sprintf(
+     		esc_html_x( 'Posted on %s', 'post date', '_bem' ),
+     		$time_string
+     	);
+ 
+     	$byline = sprintf(
+     		esc_html_x( 'Author %s', 'post author', '_bem' ),
+     		'<a class="url fn n _content__author-link'.$modifier_author_link.'" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author( ) ) . '</a>'
+     	);
+ 
+     	echo '<span class="posted-on _content__meta-time _content__date-wrapper'.$modifier_date_wrapper.'">' . $posted_on . '</span>';
+ 
+     	if ( get_the_modified_date() && get_the_modified_date() !== get_the_date() ) {
+     		$updated_on = esc_html__( 'Updated on', '_bem' );
+ 
+     		echo '<span class="byline _content__meta-time _content__update-wrapper'.$modifier_update_wrapper.'">' . $updated_on . ' ' . get_the_modified_date() . '</span>';
+     	}
+ 
+     	// echo '<span class="author vcard _content__author'.$modifier_author.'">'.$byline.'</span>';
+ 	}
 endif;
 
 if ( ! function_exists( '_bem_entry_footer' ) ) :

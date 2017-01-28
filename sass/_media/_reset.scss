@@ -11,6 +11,7 @@
 embed,
 iframe,
 object {
+    critical: this;
 	max-width: 100%;
 }
 
@@ -18,40 +19,49 @@ object {
 [src*=".jpeg"],
 [src*=".png"],
 [src*=".gif"] {
+    critical: this;
     display: block;
     max-width: 100%;
 }
 
 figure {
+    critical: this;
 	margin: 0;
 	width: 100% !important;
 
 	&.aligncenter img {
+        critical: this;
         margin: $spacing-regular--half auto;
     }
 
     &.alignleft img {
+        critical: this;
         margin-right: auto;
     }
 
     &.alignright img {
+        critical: this;
         margin-left: auto;
     }
 }
 
 img {
+    critical: this;
 	margin-top: $spacing-regular--half;
 	margin-bottom: $spacing-regular--half;
-	
+
     &.aligncenter {
+        critical: this;
         margin: $spacing-regular--half auto;
     }
 
     &.alignleft {
+        critical: this;
         margin-right: auto;
     }
 
     &.alignright {
+        critical: this;
         margin-left: auto;
     }
 }

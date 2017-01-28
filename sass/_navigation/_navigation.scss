@@ -1,90 +1,106 @@
 ._header__navigation {
-	position: relative;
+    critical: this;
+    position: relative;
 }
 
 ._header__navigation-checkbox,
 ._header__navigation-toggler {
-	display: none;
+    critical: this;
+    display: none;
 
-	@include mq($until: tablet) {
-		display: inline-block;
-	}
+    @include mq($until: tablet) {
+        critical: this;
+        display: inline-block;
+    }
 }
 
 ._header__navigation-checkbox {
-	position: absolute;
-	left: -9999px;
+    critical: this;
+    position: absolute;
+    left: -9999px;
 }
 
 ._header__navigation-toggler {
-	margin: $spacing-regular--half;
+    critical: this;
+    margin: $spacing-regular--half;
 }
 
 ._header__menu {
-	display: none;
+    critical: this;
+    display: none;
 
-	@include mq($from: tablet) {
-		display: block;
-	}
+    @include mq($from: tablet) {
+        critical: this;
+        display: block;
+    }
 }
 
 ._header__navigation-checkbox:checked ~ ._header__menu {
-	@include flex;
-	@include direction(column);
-	position: absolute;
-	top: 100%;
-	left: 0;
-	right: 0;
+    critical: this;
+    @include flex;
+    @include direction(column);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
 }
 
 ._header__menu-list,
 ._header__submenu-list {
-	background-color: $color__header-menu;
-	padding: 0;
-	list-style: none;
+    critical: this;
+    background-color: $color__header-menu;
+    list-style: none;
 
-	@include mq($from: tablet) {
-		@include flex;
-		@include flex-justify--space-around;
-	}
+    @include mq($from: tablet) {
+        critical: this;
+        @include flex;
+        @include flex-justify--space-around;
+    }
 }
 
 ._header__submenu-list {
-	@include flex-container--column;
+    critical: this;
+    @include flex-container--column;
 
-	@include mq($from: tablet) {
-		display: none;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-	}
+    @include mq($from: tablet) {
+        critical: this;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
 }
 
 ._header__menu-item,
 ._header__submenu-item {
-	@include flexbox(1);
-	position: relative;
+    critical: this;
+    @include flexbox(1);
+    position: relative;
 }
 
 ._header__menu-link,
 ._header__submenu-link {
-	@include mq($from: tablet) {
-		padding: $spacing-regular--half;
-	}
+    @include mq($from: tablet) {
+        critical: this;
+        padding: $spacing-regular--half;
+    }
 }
 
 ._header__menu-link,
 ._header__submenu-link {
-	@include flex;
-	@include flexbox(1);
-	@include flex-item--center;
+    critical: this;
+    @include flex;
+    @include flexbox(1);
+    @include flex-item--center;
 }
 
 ._header__menu-link {
-	@include direction(column);
+    critical: this;
+    @include direction(column);
 }
 
 ._header__menu-item:hover > ._header__submenu-list {
-	display: block;
+    critical: this;
+    display: block;
 }
