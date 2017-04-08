@@ -9,6 +9,11 @@ pre {
     overflow: auto;
 }
 
+pre {
+    critical: this;
+    white-space: pre-wrap;
+}
+
 code, kbd, tt, var {
     font-family: $font__code;
 }

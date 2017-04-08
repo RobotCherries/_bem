@@ -58,12 +58,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 @import "_reset/reset";
-@import "../bower_components/normalize-css/normalize.css";
+// @import "../bower_components/normalize-css/normalize.css";
 
 /*--------------------------------------------------------------
 # Grid
 --------------------------------------------------------------*/
-@import "../bower_components/cita-flex/css/src/_cita-flex-mixins";
+@import "./bower_components/cita-flex/css/src/_cita-flex-mixins.scss";
 
 /*--------------------------------------------------------------
 # Typography
