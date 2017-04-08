@@ -1,0 +1,27 @@
+@function makeStripedBackground($direction: to bottom, $steps: 10, $color1: Tomato, $color2: Gold) {
+  $stripes: '';
+  $jump: 100 / $steps;
+
+  $lastColor: $color2;
+
+  @if $steps % 2 == 1 {
+    $lastColor: $color1;
+  }
+
+  @for $i from 0 through $steps - 1 {
+    $percent1: $i * $jump;
+    $percent2: ($i + 1) * $jump;
+
+    @if $i % 2 == 0 {
+      $stripes: $stripes + $color1 + ' ' + $percent1 + '%' + ', ' + $color1 + ' ' + $percent2 + '%';
+    } @else {
+      $stripes: $stripes + $color2 + ' ' + $percent1 + '%' + ', ' + $color2 + ' ' + $percent2 + '%';
+    }
+
+    @if $i != ($steps - 1) {
+      $stripes: $stripes + ', ';
+    }
+  }
+
+  @return linear-gradient($direction, #{$stripes});
+}
