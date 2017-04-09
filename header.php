@@ -48,7 +48,7 @@ if ( $description || is_customize_preview() ) : ?>
 			endif; ?>
 		</div><!-- ._header__branding -->
 
-		<?php get_template_part( 'template-parts/menu-static', true ); ?>
+		<?php get_template_part( 'template-parts/menu-toggle', true ); ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content _content">
