@@ -1,6 +1,6 @@
 {
   "name": "underscores-bem",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "BEMified underscores theme template.",
   "main": "index.js",
   "scripts": {
@@ -22,20 +22,18 @@
   },
   "homepage": "https://github.com/maliMirkec/_bem#readme",
   "devDependencies": {
-    "bower": "latest",
+    "bower": "^1.8.0",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-bump": "latest",
     "gulp-clean-css": "latest",
-    "gulp-critical-css": "latest",
+    "gulp-critical-css": "github:malimirkec/gulp-critical-css",
     "gulp-cssimport": "latest",
     "gulp-remove-empty-lines": "latest",
+    "gulp-rename": "latest",
     "gulp-sass": "latest",
+    "gulp-sequence": "latest",
     "gulp-strip-css-comments": "latest",
-    "require-dir": "latest",
-    "run-sequence": "latest"
-  },
-  "dependencies": {
-    "bower": "latest"
+    "require-dir": "latest"
   }
 }
