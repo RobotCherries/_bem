@@ -1,0 +1,1 @@
+<?php #To show favicon, place favicon files and link here ?>

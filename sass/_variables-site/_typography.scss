@@ -5,6 +5,9 @@ if custom fonts used, define it here
 $default-font-size: 16; // without unit
 $default-font-size--mobile: 12; // without unit
 
+$document-font-size: 1em;
+$document-font-size--mobile: .75em;
+
 $font__theme: custom;
 $font__custom: -apple-system, BlinkMacSystemFont,
 "Segoe UI", "Roboto", "Oxygen",
