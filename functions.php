@@ -76,11 +76,21 @@ if ( ! function_exists( '_bem_setup' ) ) :
 				'default-color' => 'ffffff',
 				'default-image' => '',
 			) ) );
-
+	
+			// define images sizes
 			add_image_size( 'thumbnail', 400, 300, true );
 			add_image_size( 'medium', 600, 450, true );
 			add_image_size( 'large', 800, 600, true );
 			add_image_size( 'post-thumbnail', 800, 600, true );
+			
+			// // add another thumbnail, e.g. Highlight Image
+			// if (class_exists('MultiPostThumbnails')) {
+			// 	new MultiPostThumbnails(array(
+			// 		'label' => 'Highlight Image',
+			// 		'id' => 'highlight-image',
+			// 		'post_type' => 'post'
+			// 	));
+			// }
 	}
 endif;
 add_action( 'after_setup_theme', '_bem_setup' );

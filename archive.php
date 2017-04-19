@@ -14,7 +14,17 @@ get_header(); ?>
 
 		<?php
 		if ( have_posts() ) : ?>
-
+			<?php
+			/* If exists, display highlight image
+			 * If not, display thumbnail
+			 */
+			// if ( class_exists( 'MultiPostThumbnails' ) ) {
+			//   MultiPostThumbnails::the_post_thumbnail( get_post_type(), 'highlight-image' );
+			// } else if( has_post_thumbnail() ) {
+			//   the_post_thumbnail('medium');
+			// }
+			?>
+			
 			<header class="page-header _content__header _content__header--category">
 				<?php
 					the_archive_title( '<h1 class="page-title _content__title _content__title--category">', '</h1>' );
