@@ -3,7 +3,7 @@
 _bem
 ===
 
-I'm a fork of [_s project](https://github.com/Automattic/_s).
+I'm a fork of [_s project](https://travis-ci.org/maliMirkec/_bem).
 
 Just like `_s`, I'm a theme for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
@@ -37,29 +37,26 @@ ToDo
 	- [x] [cita-flex](https://github.com/maliMirkec/cita-flex)
 	- [x] [normalize](https://github.com/necolas/normalize.css)
 	- [x] [sass-mq](https://github.com/sass-mq/sass-mq)
-- [ ] Styling
-	- [ ] Header
+- [x] Styling
+	- [x] Header
 	- [x] Navigation
 	- [x] Content
 		- [x] Typography
-		- [ ] Featured image
-		- [ ] Gallery
-	- [ ] Aside
+		- [x] Featured image
+		- [x] Gallery
+	- [x] Aside
 	- [x] Comments
-	- [ ] 404 page
-	- [ ] Search
-	- [ ] Footer
-- [ ] BEM
-	- [ ] COMMENTS
+	- [x] 404 page
+	- [x] Search
+	- [x] Footer
+- [x] BEM
+	- [x] COMMENTS
 	  - [x] edit_comment_link
 	  - [x] comment_reply_link
 	  - [x] comment_form
-	- [ ] 404
-	  - [ ] widget recent-entries
-	  - [ ] widget archive
 	- [x] SEARCH
 	  - [x] post-edit-link
-	- [ ] SEARCH
+	- [x] SEARCH
 		- [x] post-navigation
-		- [ ] gallery
-		- [ ] featured image
+		- [x] gallery
+		- [x] featured image

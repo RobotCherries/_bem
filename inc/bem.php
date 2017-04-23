@@ -22,6 +22,10 @@ require get_template_directory( ) . '/inc/bem-post-links.php';
  */
 require get_template_directory( ) . '/inc/bem-post-edit-link.php';
 /**
- * Load bem gallery..
+ * Load bem gallery.
  */
 require get_template_directory( ) . '/inc/bem-gallery.php';
+/**
+ * Load bem tinymce.
+ */
+require get_template_directory( ) . '/inc/bem-tinymce.php';

@@ -60,16 +60,17 @@ function _bem_gallery( $output, $attr ) {
 
 	// Initialize.
 	$shortcode_atts['id'] = intval( $shortcode_atts['id'] );
+	
 	$attachments = array();
 	if ( 'RAND' === $shortcode_atts['order'] ) {
 		$shortcode_atts['orderby'] = 'none';
 	}
-
+	
 	if ( ! empty( $shortcode_atts['include'] ) ) {
 
 		// Include attribute is present.
 		$shortcode_atts['include'] = preg_replace( '/[^0-9,]+/', '', $shortcode_atts['include'] );
-		$_attachments = new WP_Query( array( 'include' => $shortcode_atts['include'], 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $shortcode_atts['order'], 'orderby' => $shortcode_atts['orderby'] ) );
+		$_attachments = new WP_Query( array( 'post__in' => explode(',', $shortcode_atts['include']), 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $shortcode_atts['order'], 'orderby' => $shortcode_atts['orderby'] ) );
 
 		// Setup attachments array.
 		foreach ( $_attachments->posts as $key => $val ) {
