@@ -13,7 +13,7 @@
 }
 
 @include mq($from: desktop) {
-    @for $i from 2 through 9 {
+    @for $i from 1 through 9 {
         ._gallery__item--#{$i} {
             @include flex-basis($i, $spacing-regular--half);
             margin-bottom: $spacing-regular--half;
