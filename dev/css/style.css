@@ -143,16 +143,10 @@ textarea {
   flex-direction: column;
   flex-grow: 0;
   justify-content: center;
+  width: 100%;
+  flex-basis: auto;
   margin-bottom: 0.5rem; }
 @media (min-width: 61.25em) {
-  ._gallery__item--1 {
-    width: calc(100 * 1% - 0rem);
-    flex-basis: auto;
-    margin-bottom: 0.5rem; }
-    ._gallery__item--1:nth-of-type(1n+1) {
-      padding-right: 0.5rem; }
-    ._gallery__item--1:nth-of-type(1n+0) {
-      padding-right: 0.5rem; }
   ._gallery__item--2 {
     width: calc(50 * 1% - 0.25rem);
     flex-basis: auto;
