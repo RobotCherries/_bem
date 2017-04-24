@@ -1,7 +1,7 @@
 {
   "name": "underscores-bem",
   "description": "BEMified underscores theme template.",
-  "version": "0.9.7",
+  "version": "0.9.8",
   "main": "index.js",
   "authors": [
     "maliMirkec <malimirkeccita@gmail.com>"

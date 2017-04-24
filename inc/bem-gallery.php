@@ -156,7 +156,7 @@ function _bem_gallery( $output, $attr ) {
 		$output .= "</{$itemtag}>";
 
 		// Line breaks by columns set.
-		if ( $shortcode_atts['columns'] > 0 && ++$i % 0 === $shortcode_atts['columns'] ) { $output .= '<br style="clear: both">';
+		if ( $shortcode_atts['columns'] > 0 && ++$i === $shortcode_atts['columns'] ) { $output .= '<br style="clear: both">';
 		}
 	}
 
