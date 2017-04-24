@@ -18,6 +18,10 @@ function _bem_tinymce($init) {
     // uncomment line below if custom sizes needed
     // $init['fontsize_formats'] = '10px 12px 14px 16px 20px 24px 32px 48px';
     
+    // uncomment lines below if small format needed
+    // $init['style_formats'] = json_encode(array('title' => 'Small', 'inline' => 'small'));
+    // $init['style_formats_merge'] = true;
+    
     return $init;
 }
 
