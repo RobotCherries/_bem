@@ -23,6 +23,16 @@ function _bem_body_classes( $classes ) {
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
+	
+	if ( have_posts() ) {
+		while ( have_posts() ) {
+			the_post();
+		}
+	}
+	
+	if( has_post_format( 'aside' ) ) {
+		$classes[] = '_simple-format-aside';
+	}
 
 	return $classes;
 }
