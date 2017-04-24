@@ -1032,19 +1032,13 @@ img {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 100%;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
   margin-bottom: 0.5rem; }
 
 @media (min-width: 61.25em) {
-  ._gallery__item--1 {
-    width: calc(100 * 1% - 0rem);
-    -webkit-flex-basis: auto;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
-    margin-bottom: 0.5rem; }
-    ._gallery__item--1:nth-of-type(1n+1) {
-      padding-right: 0.5rem; }
-    ._gallery__item--1:nth-of-type(1n+0) {
-      padding-right: 0.5rem; }
   ._gallery__item--2 {
     width: calc(50 * 1% - 0.25rem);
     -webkit-flex-basis: auto;
