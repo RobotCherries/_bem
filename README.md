@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/maliMirkec/_bem.svg?branch=master)](https://travis-ci.org/maliMirkec/_bem)
-
 _bem
 ===
 
@@ -8,6 +6,10 @@ I'm a fork of [_s project](https://github.com/Automattic/_s).
 Just like `_s`, I'm a theme for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
 And to provide [`BEM`](https://en.bem.info/) methodology (for most of Wordpress components).
+
+Read full [blog post]( https://silvestarbistrovic.from.hr/en/articles/bem-wordpress-theme/).
+
+Demo is available [here](https://frontend-developer.xyz/_bem).
 
 Intro
 --
@@ -22,36 +24,14 @@ If you want me to be your starter project, clone me into `./wp-content/themes/` 
 Important notes
 --
 
-This is a work in progress. There may be unstyled areas. If you find them, please open an issue [here](https://github.com/maliMirkec/_bem/issues/new).
+Use with caution! This is a still work in progress. There may be unstyled or unfinished areas. If you find some, please open an issue [here](https://github.com/maliMirkec/_bem/issues/new).
 
-ToDo
+Built using
 --
 
-- [x] VENDOR
-	- [x] [gutenberg](http://matejlatin.github.io/Gutenberg/)
-	- [x] [cita-flex](https://github.com/maliMirkec/cita-flex)
-	- [x] [normalize](https://github.com/necolas/normalize.css)
-	- [x] [sass-mq](https://github.com/sass-mq/sass-mq)
-- [x] Styling
-	- [x] Header
-	- [x] Navigation
-	- [x] Content
-		- [x] Typography
-		- [x] Featured image
-		- [x] Gallery
-	- [x] Aside
-	- [x] Comments
-	- [x] 404 page
-	- [x] Search
-	- [x] Footer
-- [x] BEM
-	- [x] COMMENTS
-	  - [x] edit_comment_link
-	  - [x] comment_reply_link
-	  - [x] comment_form
-	- [x] SEARCH
-	  - [x] post-edit-link
-	- [x] SEARCH
-		- [x] post-navigation
-		- [x] gallery
-		- [x] featured image
+* [cita-flex](https://github.com/maliMirkec/cita-flex)
+* [System fonts](https://css-tricks.com/snippets/css/system-font-stack/)
+* [Gutenberg](http://matejlatin.github.io/Gutenberg/)
+* [Sass MQ](http://sass-mq.github.io/sass-mq/)
+* [CSS locks](https://css-tricks.com/css-locks/)
+* [Critical CSS](https://mscharl.github.io/gulp-critical-css/)
