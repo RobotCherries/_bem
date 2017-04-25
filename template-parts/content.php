@@ -21,7 +21,9 @@
 		if ( has_post_thumbnail() ) {
 			?>
 			<div class="_post-thumbnail">
-			<?php the_post_thumbnail( 'full', array( 'class' => '_post-thumbnail__image' ) ); ?>
+                <a class="_post-thumbnail__link" href="<?php echo esc_url( get_permalink() ); ?>">
+			        <?php the_post_thumbnail( 'full', array( 'class' => '_post-thumbnail__image' ) ); ?>
+                </a>
 			</div>
 			<?php
 		}
