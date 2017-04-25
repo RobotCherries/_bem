@@ -27,21 +27,7 @@
 </noscript>
 <script>
 'use strict';
-
-var loadDeferredStyles = function() {
-    var addStylesNode = document.getElementsByClassName('deferred-styles');
-
-    while(addStylesNode.length > 0){
-        var replacement = document.createElement("div");
-        replacement.innerHTML = addStylesNode[0].textContent;
-        document.body.appendChild(replacement)
-        addStylesNode[0].parentNode.removeChild(addStylesNode[0]);
-    }
-};
-var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-webkitRequestAnimationFrame || msRequestAnimationFrame;
-if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-else window.addEventListener('load', loadDeferredStyles);
+var loadDeferredStyles=function(){for(var e=document.getElementsByClassName('deferred-styles'),t=e.length;e.length>0&&0!==t;){t--;var n=document.createElement('div');n.innerHTML=e[t].textContent,document.body.appendChild(n);var r=e[t].parentNode;r&&r.removeChild(e[t])}},raf=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;raf?raf(function(){window.setTimeout(loadDeferredStyles,0)}):window.addEventListener('load',loadDeferredStyles);
 </script>
 </body>
 </html>
