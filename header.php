@@ -18,7 +18,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php
-$critical_css = get_template_directory() . '/dist/css/style.min.css';
+$critical_css = get_template_directory() . '/dist/css/style.critical.min.css';
 if(file_exists($critical_css)) { ?>
 <style media="screen">
 <?php echo file_get_contents($critical_css); ?>
