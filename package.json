@@ -1,6 +1,6 @@
 {
   "name": "underscores-bem",
-  "version": "0.9.10",
+  "version": "0.9.11",
   "description": "BEMified underscores theme template.",
   "main": "index.js",
   "scripts": {
