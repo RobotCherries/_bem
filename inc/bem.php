@@ -29,3 +29,7 @@ require get_template_directory( ) . '/inc/bem-gallery.php';
  * Load bem tinymce.
  */
 require get_template_directory( ) . '/inc/bem-tinymce.php';
+/**
+ * Load script loader.
+ */
+require get_template_directory( ) . '/inc/bem-script-loader-tag.php';
