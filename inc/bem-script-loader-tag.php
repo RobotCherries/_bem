@@ -38,18 +38,18 @@ add_filter( 'script_loader_tag', '_bem_script_loader_tag', 10, 3 );
  */
 function _bem_style_loader_tag( $tag, $handle, $src, $media ) {
 	// The handles of the enqueued styles we want to defer
-	$defer_styles = array(
-        'metaslider-responsive-slider',
-		'metaslider-public',
-        'pibfi_pinterest_style'
-	);
-
-    if ( in_array( $handle, $defer_styles ) ) {
-        if(!$media) {
-            $media = 'all';
-        }
-        return '<noscript class="deferred-styles"><link rel="stylesheet" type="text/css" href="' . $src . '"' . $style_media.' media="' . $media . '"></noscript>' . "\n";
-    }
+	// $defer_styles = array(
+    //     'metaslider-responsive-slider',
+	// 	'metaslider-public',
+    //     'pibfi_pinterest_style'
+	// );
+    //
+    // if ( in_array( $handle, $defer_styles ) ) {
+    //     if(!$media) {
+    //         $media = 'all';
+    //     }
+    //     return '<noscript class="deferred-styles"><link rel="stylesheet" type="text/css" href="' . $src . '"' . $style_media.' media="' . $media . '"></noscript>' . "\n";
+    // }
 
     return $tag;
 }
