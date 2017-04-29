@@ -1,6 +1,6 @@
 @charset "UTF-8";
   @media screen and (min-width: 20em) { }
-  @media screen and (min-width: 61.25em) { }
+  @media screen and (min-width: 75em) { }
 figcaption {
   line-height: 26px;
   line-height: 1.625rem;

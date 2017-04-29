@@ -23,3 +23,10 @@
     clear: both;
     display: inline-block;
 }
+
+._content__meta-time {
+    ._content__meta-time + & {
+        critical: this;
+        margin-left: $spacing-regular--half;
+    }
+}

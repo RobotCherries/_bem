@@ -262,15 +262,15 @@ img {
 --------------------------------------------------------------*/
 html {
   critical: this;
-  font-size: 12; }
+  font-size: 0.875em; }
   @media screen and (min-width: 20em) {
     html {
       critical: this;
-      font-size: calc(12 + 4 * (100vw - 20em) / 41.25); } }
-  @media screen and (min-width: 61.25em) {
+      font-size: calc(0.875em + 0.125 * (100vw - 20em) / 55); } }
+  @media screen and (min-width: 75em) {
     html {
       critical: this;
-      font-size: 16; } }
+      font-size: 1em; } }
 
 /*--------------------------------------------------------------
 # Typography
@@ -683,6 +683,10 @@ big {
   critical: this;
   clear: both;
   display: inline-block; }
+
+._content__meta-time + ._content__meta-time {
+  critical: this;
+  margin-left: 0.5rem; }
 
 /*--------------------------------------------------------------
 # Layout
