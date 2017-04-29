@@ -1,4 +1,4 @@
 html {
     critical: this;
-    @include fluid-type(font-size, $mq-mobile, $mq-desktop, $default-font-size--mobile, $default-font-size);
+    @include fluid-type(font-size, $mq-mobile, $mq-wide, $document-font-size--mobile, $document-font-size);
 }
