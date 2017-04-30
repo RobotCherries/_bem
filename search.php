@@ -31,9 +31,14 @@ get_header(); ?>
 				get_template_part( 'template-parts/content', 'search' );
 
 			endwhile;
+            ?>
 
-			the_posts_navigation();
+            <div class="_post-navigation">
+                <div class="_post-navigation__item"><?php previous_posts_link() ?></div>
+                <div class="_post-navigation__item"><?php next_posts_link() ?></div>
+            </div>
 
+            <?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
