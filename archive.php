@@ -24,7 +24,7 @@ get_header(); ?>
 			//   the_post_thumbnail('medium');
 			// }
 			?>
-			
+
 			<header class="page-header _content__header _content__header--category">
 				<?php
 					the_archive_title( '<h1 class="page-title _content__title _content__title--category">', '</h1>' );
@@ -44,9 +44,14 @@ get_header(); ?>
 				get_template_part( 'template-parts/content', get_post_format() );
 
 			endwhile;
+            ?>
 
-			the_posts_navigation();
+            <div class="_post-navigation">
+                <div class="_post-navigation__item"><?php previous_posts_link() ?></div>
+                <div class="_post-navigation__item"><?php next_posts_link() ?></div>
+            </div>
 
+            <?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
