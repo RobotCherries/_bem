@@ -47,50 +47,50 @@ if ( ! function_exists( '_bem_setup' ) ) :
 			'primary' => esc_html__( 'Primary', '_bem' ),
 		) );
 
-			/*
-             * Switch default core markup for search form, comment form, and comments
-             * to output valid HTML5.
-			 */
-			add_theme_support( 'html5', array(
-				'search-form',
-				'comment-form',
-				'comment-list',
-				'gallery',
-				'caption',
-			) );
+		/*
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+		 */
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
 
-			/*
-             * Enable support for Post Formats.
-             * See https://developer.wordpress.org/themes/functionality/post-formats/
-			 */
-			add_theme_support( 'post-formats', array(
-				'aside',
-				'image',
-				'video',
-				'quote',
-				'link',
-			) );
+		/*
+         * Enable support for Post Formats.
+         * See https://developer.wordpress.org/themes/functionality/post-formats/
+		 */
+		add_theme_support( 'post-formats', array(
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'link',
+		) );
 
-			// Set up the WordPress core custom background feature.
-			add_theme_support( 'custom-background', apply_filters( '_bem_custom_background_args', array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			) ) );
-	
-			// define images sizes
-			add_image_size( 'thumbnail', 400, 300, true );
-			add_image_size( 'medium', 600, 450, true );
-			add_image_size( 'large', 800, 600, true );
-			add_image_size( 'post-thumbnail', 800, 600, true );
-			
-			// // add another thumbnail, e.g. Highlight Image
-			// if (class_exists('MultiPostThumbnails')) {
-			// 	new MultiPostThumbnails(array(
-			// 		'label' => 'Highlight Image',
-			// 		'id' => 'highlight-image',
-			// 		'post_type' => 'post'
-			// 	));
-			// }
+		// Set up the WordPress core custom background feature.
+		add_theme_support( 'custom-background', apply_filters( '_bem_custom_background_args', array(
+			'default-color' => 'ffffff',
+			'default-image' => '',
+		) ) );
+
+		// define images sizes
+		add_image_size( 'thumbnail', 400, 300, true );
+		add_image_size( 'medium', 600, 450, true );
+		add_image_size( 'large', 800, 600, true );
+		add_image_size( 'post-thumbnail', 800, 600, true );
+
+		// // add another thumbnail, e.g. Highlight Image
+		// if (class_exists('MultiPostThumbnails')) {
+		// 	new MultiPostThumbnails(array(
+		// 		'label' => 'Highlight Image',
+		// 		'id' => 'highlight-image',
+		// 		'post_type' => 'post'
+		// 	));
+		// }
 	}
 endif;
 add_action( 'after_setup_theme', '_bem_setup' );
