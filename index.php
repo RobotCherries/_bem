@@ -39,14 +39,9 @@ get_header(); ?>
 				get_template_part( 'template-parts/content', get_post_format() );
 
 			endwhile;
-            ?>
 
-            <div class="_post-navigation">
-                <div class="_post-navigation__item"><?php previous_posts_link() ?></div>
-                <div class="_post-navigation__item"><?php next_posts_link() ?></div>
-            </div>
+            the_posts_navigation();
 
-            <?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
