@@ -22,7 +22,7 @@ function _bem_previous_posts_link_attributes() {
     return 'class="_post-navigation__link _post-navigation__link--previous"';
 }
 
-add_action( 'navigation_markup_template', 'bem_pagination' );
+add_action( 'navigation_markup_template', '_bem_pagination' );
 
 /**
  * Display posts navigation
