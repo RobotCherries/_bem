@@ -57,7 +57,7 @@ $color-link-visited: $color__link-visited;
 // Horizontal rule
 $hr-style: line; // [ line / type ]
 $hr-type-content: '***'; // [ '***' ]
-$hr-type-char-spacing: .2em; // [ .2em ]
+$hr-type-char-spacing: 2px; // [ .2em ]
 $hr-margin: 2;
 $hr-margin-desktop: $hr-margin;
 $hr-color: $color-font-body;

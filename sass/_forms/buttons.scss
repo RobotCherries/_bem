@@ -2,7 +2,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    critical: this;
+    @include fluid-type(padding, $mq-mobile, $mq-wide, $spacing-regular--quarter, $spacing-regular--half);
 	// @include font-size(1);
 	line-height: 1;
 	border: 1px solid;
@@ -10,7 +10,6 @@ input[type="submit"] {
 	border-color: $color__border-button;
 	background: $color__background-button;
 	color: $color__text-button;
-	padding: $spacing-regular--half;
 
 	&:hover {
 		cursor: pointer;

@@ -1,0 +1,29 @@
+._content {
+    @include fluid-type(padding, $mq-mobile, $mq-wide, $spacing-regular--quarter, $spacing-regular--half);
+
+	img {
+        critical: this;
+		height: 100%;
+	}
+}
+
+._content__footer {
+    @include fluid-type(margin-top, $mq-mobile, $mq-wide, $spacing-regular--quarter, $spacing-regular--half);
+}
+
+._post-navigation__item:empty {
+    critical: this;
+	display: none;
+}
+
+._content__edit-link {
+    critical: this;
+    clear: both;
+    display: inline-block;
+}
+
+._content__meta-time {
+    ._content__meta-time + & {
+        @include fluid-type(margin-left, $mq-mobile, $mq-wide, $spacing-regular--quarter, $spacing-regular--half);
+    }
+}

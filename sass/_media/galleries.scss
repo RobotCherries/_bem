@@ -1,7 +1,7 @@
 ._gallery {
     @include flex-container;
     @include flex-container--wrap;
-    margin-top: $spacing-regular--half;
+    @include fluid-type(margin-top, $mq-mobile, $mq-wide, $spacing-regular--quarter, $spacing-regular--half, 0);
 }
 
 ._gallery__item {
@@ -10,18 +10,18 @@
     @include flex-box--no-grow;
     @include flex-justify--center;
     @include flex-basis(1);
-    margin-bottom: $spacing-regular--half;
+    @include fluid-type(margin-bottom, $mq-mobile, $mq-wide, $spacing-regular--quarter, $spacing-regular--half, 0);
 }
 
 @include mq($from: desktop) {
     @for $i from 2 through 9 {
         ._gallery__item--#{$i} {
             @include flex-basis($i, $spacing-regular--half);
-            margin-bottom: $spacing-regular--half;
+            @include fluid-type(margin-bottom, $mq-mobile, $mq-wide, $spacing-regular--quarter, $spacing-regular--half, 0);
 
             @for $j from 1 through $i - 1 {
                 &:nth-of-type(#{$i}n+#{$j}) {
-                    padding-right: $spacing-regular--half;
+                    @include fluid-type(padding-right, $mq-mobile, $mq-wide, $spacing-regular--quarter, $spacing-regular--half, 0);
                 }
             }
         }

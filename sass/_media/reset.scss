@@ -31,7 +31,7 @@ figure {
 
 	&.aligncenter img {
         critical: this;
-        margin: $spacing-regular--half auto;
+        margin: 0 auto;
     }
 
     &.alignleft img {
@@ -43,16 +43,20 @@ figure {
         critical: this;
         margin-left: auto;
     }
+
+    a {
+        critical: this;
+        display: block;
+    }
 }
 
 img {
-    critical: this;
-	margin-top: $spacing-regular--half;
-	margin-bottom: $spacing-regular--half;
+    @include fluid-type(margin-top margin-bottom, $mq-mobile, $mq-wide, $spacing-regular--quarter, $spacing-regular--half);
 
     &.aligncenter {
-        critical: this;
-        margin: $spacing-regular--half auto;
+        @include fluid-type(margin-top margin-bottom, $mq-mobile, $mq-wide, $spacing-regular--quarter, $spacing-regular--half);
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &.alignleft {

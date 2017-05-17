@@ -1,0 +1,13 @@
+$letter-spacing: 1px;
+
+$sup-position: -8px;
+$sub-position: -4px;
+
+$spacing-regular: 20px;
+$spacing-regular--half: $spacing-regular / 2;
+$spacing-regular--quarter: $spacing-regular / 4;
+$spacing-regular--single: $spacing-regular / $spacing-regular + 0px;
+$spacing-regular--double: $spacing-regular * 2;
+
+$input-height: 30px;
+$input-height--double: $input-height * 2;
