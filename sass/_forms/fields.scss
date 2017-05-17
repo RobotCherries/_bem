@@ -19,12 +19,11 @@ input[type="datetime-local"],
 input[type="color"],
 textarea,
 select {
-    critical: this;
+    @include fluid-type(padding, $mq-mobile, $mq-wide, $spacing-regular--quarter, $spacing-regular--half);
 	// @include font-size(1);
 	line-height: 1.3;
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
-	padding: $spacing-regular--half;
 	width: 100%;
 	display: block;
 	box-sizing: border-box;

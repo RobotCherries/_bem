@@ -1,0 +1,31 @@
+ul, ol {
+    @include fluid-type(margin-bottom, $mq-mobile, $mq-wide, $spacing-regular--half, $spacing-regular, 0);
+    @include fluid-type(margin-left, $mq-mobile, $mq-wide, $spacing-regular, $spacing-regular--double, 0);
+    margin-top: 0;
+    margin-right: 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+    @include fluid-type(margin-left, $mq-mobile, $mq-wide, $spacing-regular--half, $spacing-regular, 0);
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+    @include fluid-type(margin-bottom, $mq-mobile, $mq-wide, $spacing-regular--half, $spacing-regular, 0);
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+}

@@ -1,0 +1,6 @@
+table {
+	@include fluid-type(margin-top margin-bottom, $mq-mobile, $mq-wide, $spacing-regular--half, $spacing-regular, 0);
+    margin-left: 0;
+    margin-bottom: 0;
+	width: 100%;
+}

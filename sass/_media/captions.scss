@@ -1,0 +1,9 @@
+.wp-caption {
+    @include fluid-type(margin-bottom, $mq-mobile, $mq-wide, $spacing-regular--half, $spacing-regular, 0);
+    max-width: 100%;
+}
+
+.wp-caption-text {
+    @include fluid-type(margin-bottom, $mq-mobile, $mq-wide, $spacing-regular--half, $spacing-regular, 0);
+    text-align: center;
+}

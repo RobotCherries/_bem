@@ -1,6 +1,0 @@
-@include mq($from: tablet) {
-    ._sidebar {
-        critical: this;
-        padding-left: $spacing-regular;
-    }
-}

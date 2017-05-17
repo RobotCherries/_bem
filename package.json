@@ -29,6 +29,7 @@
     "gulp-clean-css": "latest",
     "gulp-critical-css": "github:malimirkec/gulp-critical-css",
     "gulp-cssimport": "latest",
+    "gulp-livereload": "^3.8.1",
     "gulp-remove-empty-lines": "latest",
     "gulp-rename": "latest",
     "gulp-sass": "latest",
